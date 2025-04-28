@@ -82,7 +82,7 @@ npm install
 
 ### 4. 初始化数据库
 
-- 推荐使用 `featured_data_examples_ordered.sql` 或 `sql/` 目录下脚本导入 MySQL。
+- 推荐参考 sql 脚本导入 MySQL。
 - 确保数据库配置与 `.env` 保持一致。
 
 ### 5. 启动服务

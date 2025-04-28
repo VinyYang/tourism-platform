@@ -1,0 +1,460 @@
+.routeMapWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  min-height: 300px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 4px;
+  overflow: hidden;
+  
+  // 修复Safari滚动问题
+  -webkit-overflow-scrolling: touch;
+  
+  // 高DPI显示优化
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  
+  // 支持高分辨率设备
+  @media screen and (min-resolution: 1.5dppx) {
+    transform: translateZ(0) scale(1.0);
+  }
+  
+  @media screen and (min-resolution: 2dppx) {
+    transform: translateZ(0) scale(1.0);
+  }
+}
+
+.mapContainer {
+  width: 100%;
+  height: 100%;
+  
+  // 确保地图容器正确渲染
+  position: absolute;
+  top: 0;
+  left: 0;
+  
+  // 高分辨率优化
+  z-index: 1;
+  
+  // 改进地图图标和文本
+  :global {
+    // 优化高德地图Logo
+    .amap-logo {
+      opacity: 0.6;
+      
+      @media screen and (min-resolution: 2dppx) {
+        transform: scale(0.8);
+        transform-origin: right bottom;
+      }
+    }
+    
+    // 版权信息
+    .amap-copyright {
+      font-size: 10px;
+      opacity: 0.7;
+      
+      @media screen and (min-resolution: 2dppx) {
+        font-size: 9px;
+      }
+    }
+    
+    // 控制条样式
+    .amap-toolbar {
+      opacity: 0.9;
+      
+      @media screen and (min-resolution: 2dppx) {
+        transform: scale(0.95);
+        transform-origin: right top;
+      }
+    }
+    
+    // 比例尺样式
+    .amap-scale {
+      opacity: 0.9;
+      
+      @media screen and (min-resolution: 2dppx) {
+        transform: scale(0.95);
+        transform-origin: left bottom;
+      }
+    }
+    
+    // 控制栏样式
+    .amap-controlbar {
+      opacity: 0.9;
+      
+      @media screen and (min-resolution: 2dppx) {
+        transform: scale(0.95);
+        transform-origin: left top;
+      }
+    }
+    
+    // 标记点优化
+    .amap-marker {
+      // 确保标记点在高分辨率设备上清晰
+      img {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+      }
+    }
+  }
+}
+
+.loadingContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.85);
+  z-index: 10;
+  
+  p {
+    margin-top: 16px;
+    color: #1890ff;
+    font-size: 14px;
+    
+    @media screen and (min-resolution: 2dppx) {
+      font-size: 13px;
+    }
+  }
+}
+
+.errorContainer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 10;
+  padding: 20px;
+  text-align: center;
+  
+  p {
+    margin-bottom: 16px;
+    color: #ff4d4f;
+    font-size: 14px;
+    max-width: 80%;
+    
+    @media screen and (min-resolution: 2dppx) {
+      font-size: 13px;
+    }
+  }
+  
+  button {
+    // 确保按钮在高分辨率设备上清晰
+    transform: translateZ(0);
+  }
+}
+
+.routeInfo {
+  background: rgba(255, 255, 255, 0.8);
+  border-radius: 4px;
+  padding: 8px 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  z-index: 100;
+  
+  div {
+    margin-bottom: 4px;
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+// 高分辨率显示支持
+@media (min-resolution: 2dppx) {
+  .mapContainer {
+    // 确保高DPI下地图正确渲染
+    transform: scale(1);
+    transform-origin: 0 0;
+    
+    :global {
+      canvas {
+        image-rendering: -webkit-optimize-contrast;
+        image-rendering: crisp-edges;
+      }
+    }
+  }
+}
+
+// 强制修复在WebKit内核下的滚动问题
+:global {
+  .amap-maps, 
+  .amap-layers, 
+  .amap-layer {
+    -webkit-transform: translateZ(0);
+    transform: translateZ(0);
+  }
+}
+
+/* 地图容器样式 */
+.routeMapContainer {
+  position: relative;
+  width: 100%;
+  height: 600px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mapElement {
+  width: 100%;
+  height: 100%;
+}
+
+/* 加载和错误状态覆盖层 */
+.loadingOverlay,
+.errorOverlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 100;
+}
+
+.errorIcon {
+  font-size: 48px;
+  color: #f5222d;
+  margin-bottom: 16px;
+}
+
+.errorMessage {
+  margin-bottom: 16px;
+  text-align: center;
+  max-width: 80%;
+}
+
+/* 路线信息覆盖层 */
+.routeInfoOverlay {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  padding: 16px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  z-index: 90;
+  max-width: 280px;
+}
+
+.routeTags {
+  margin-top: 8px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+/* 调试信息 */
+.debugInfo {
+  position: absolute;
+  bottom: 16px;
+  right: 16px;
+  padding: 8px;
+  background-color: rgba(0, 0, 0, 0.6);
+  color: #fff;
+  border-radius: 4px;
+  font-size: 12px;
+  z-index: 90;
+}
+
+/* 自定义标记样式 */
+.customMarker {
+  position: relative;
+  text-align: center;
+}
+
+.markerIcon {
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.25);
+  border: 2px solid #fff;
+  position: relative;
+  transform-origin: center bottom;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.markerIcon:hover {
+  transform: scale(1.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+.markerIcon:after {
+  content: '';
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 0;
+  height: 0;
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 8px solid #096dd9;
+  z-index: -1;
+}
+
+.markerLabel {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 1;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+}
+
+/* 起点和终点标记样式 */
+.startMarker .markerIcon {
+  background: linear-gradient(135deg, #52c41a 0%, #389e0d 100%);
+}
+
+.startMarker .markerIcon:after {
+  border-top-color: #389e0d;
+}
+
+.endMarker .markerIcon {
+  background: linear-gradient(135deg, #f5222d 0%, #cf1322 100%);
+}
+
+.endMarker .markerIcon:after {
+  border-top-color: #cf1322;
+}
+
+/* 信息窗口样式 */
+.infoWindow {
+  min-width: 280px;
+  max-width: 320px;
+  padding: 16px;
+  border-radius: 8px;
+  background-color: #fff;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+}
+
+.infoTitle {
+  font-size: 16px;
+  font-weight: 600;
+  color: #1890ff;
+  margin-bottom: 8px;
+}
+
+.infoDesc {
+  font-size: 14px;
+  color: #666;
+  margin-bottom: 12px;
+}
+
+.infoImage {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-bottom: 12px;
+}
+
+.infoFooter {
+  font-size: 12px;
+  color: #999;
+  text-align: right;
+}
+
+/* 路径样式 */
+:global {
+  .amap-marker {
+    animation: markerDrop 0.5s ease-out;
+  }
+
+  .amap-info-content {
+    padding: 0 !important;
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+
+  .amap-info-close {
+    top: 12px !important;
+    right: 12px !important;
+    color: #999 !important;
+    font-size: 16px !important;
+  }
+
+  .amap-info-sharp {
+    display: none !important;
+  }
+
+  .amap-driving-route {
+    stroke-width: 6px !important;
+    stroke: #1890ff !important;
+    stroke-opacity: 0.8 !important;
+    stroke-linecap: round !important;
+    stroke-linejoin: round !important;
+    animation: pathDraw 1.5s ease-out forwards;
+  }
+}
+
+/* 动画效果 */
+@keyframes markerDrop {
+  0% {
+    transform: translateY(-200px);
+    opacity: 0;
+  }
+  60% {
+    transform: translateY(20px);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@keyframes pathDraw {
+  0% {
+    stroke-dashoffset: 1000;
+    opacity: 0;
+  }
+  100% {
+    stroke-dashoffset: 0;
+    opacity: 1;
+  }
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .routeInfoOverlay {
+    max-width: calc(100% - 32px);
+  }
+
+  .infoWindow {
+    min-width: 240px;
+    max-width: 280px;
+  }
+
+  .markerIcon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .markerLabel {
+    font-size: 12px;
+  }
+} 

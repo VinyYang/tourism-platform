@@ -1,0 +1,574 @@
+/* 景点页面样式 */
+.scenic-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 页面头部样式 */
+.scenic-header {
+    text-align: center;
+    margin-bottom: 40px;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #1e88e5 0%, #0d47a1 100%);
+    color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.scenic-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.scenic-header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+/* 内容布局 */
+.content-container {
+    display: flex;
+    gap: 30px;
+}
+
+/* 筛选侧边栏 */
+.filters-sidebar {
+    width: 320px;
+    flex-shrink: 0;
+}
+
+/* 主内容区域 */
+.main-content {
+    flex: 1;
+    min-width: 0; /* 防止内容溢出 */
+}
+
+/* --- 新增三维度分层架构样式 --- */
+/* 主题维度选项卡样式 */
+.filter-tabs {
+    margin-bottom: 15px;
+}
+
+.filter-tabs .ant-tabs-nav {
+    margin-bottom: 10px;
+}
+
+.filter-tabs .ant-tabs-tab {
+    padding: 10px 15px;
+}
+
+/* 维度折叠面板样式 */
+.dimension-collapse .ant-collapse-header {
+    font-weight: 500;
+}
+
+.dimension-collapse .ant-collapse-content-box {
+    padding: 12px !important;
+}
+
+/* 维度选项样式 */
+.dimension-options {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.dimension-option {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border: 1px solid #e8e8e8;
+}
+
+.dimension-option:hover {
+    background-color: #f5f5f5;
+}
+
+.dimension-option.selected {
+    background-color: #e6f7ff;
+    border-color: #91d5ff;
+}
+
+.dimension-option .option-icon {
+    font-size: 18px;
+    margin-right: 10px;
+    margin-top: 2px;
+    color: #1890ff;
+}
+
+.dimension-option .option-content {
+    flex: 1;
+}
+
+.dimension-option .option-label {
+    font-weight: 500;
+    margin-bottom: 4px;
+}
+
+.dimension-option .option-description {
+    font-size: 12px;
+    color: #666;
+}
+
+/* 筛选区块通用样式 */
+.filter-section {
+    margin-bottom: 20px;
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.filter-section h3 {
+    font-size: 16px;
+    margin-bottom: 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* 特色标签样式 */
+.secondary-themes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 0;
+}
+
+.theme-tag {
+    cursor: pointer;
+    transition: all 0.3s;
+    font-size: 13px;
+    padding: 5px 8px;
+    margin: 0;
+}
+
+.theme-tag:hover {
+    opacity: 0.8;
+}
+
+.theme-tag.selected {
+    font-weight: 500;
+}
+
+/* 动态主题组合样式 */
+.dynamic-themes {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.dynamic-theme-card {
+    padding: 10px;
+    border: 1px solid #e8e8e8;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: #fff;
+}
+
+.dynamic-theme-card:hover {
+    background-color: #f5f5f5;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.dynamic-theme-card.selected {
+    background-color: #f0f5ff;
+    border-color: #adc6ff;
+}
+
+.dynamic-theme-card h4 {
+    margin-bottom: 5px;
+    color: #1890ff;
+    font-size: 14px;
+}
+
+.dynamic-theme-card p {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 6px;
+    line-height: 1.4;
+}
+
+.dynamic-theme-card .theme-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+}
+
+.dynamic-theme-card .theme-tags .ant-tag {
+    margin: 0;
+    font-size: 11px;
+    padding: 0 5px;
+    line-height: 18px;
+}
+
+/* 激活的筛选条件标签 */
+.active-filters {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    margin-bottom: 15px;
+}
+
+.active-filters .ant-tag {
+    margin-right: 0;
+    padding: 2px 6px;
+    font-size: 12px;
+}
+
+/* 筛选按钮 */
+.filter-actions {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.filter-actions button {
+    flex: 1;
+}
+
+/* 顶部控制栏 */
+.top-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+/* --- 景点列表样式 --- */
+.scenic-list {
+    margin-bottom: 30px;
+}
+
+.scenic-card {
+    transition: all 0.3s ease;
+    height: 100%;
+    border-radius: 8px;
+    overflow: hidden;
+    border: none;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+.scenic-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.scenic-card-cover {
+    position: relative;
+    height: 180px;
+    overflow: hidden;
+}
+
+.scenic-card-cover img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.scenic-card:hover .scenic-card-cover img {
+    transform: scale(1.05);
+}
+
+.scenic-card-content {
+    padding: 12px;
+}
+
+.scenic-title-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 8px;
+}
+
+.scenic-name {
+    margin: 0;
+    font-size: 16px;
+    font-weight: 600;
+    color: #333;
+    line-height: 1.4;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+}
+
+.scenic-score {
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    color: #555;
+    white-space: nowrap;
+}
+
+.scenic-location {
+    font-size: 12px;
+    color: #666;
+    margin-bottom: 8px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.scenic-location .anticon {
+    margin-right: 4px;
+    color: #1890ff;
+}
+
+.scenic-labels {
+    margin-bottom: 8px;
+    min-height: 30px;
+}
+
+.scenic-description {
+    font-size: 12px;
+    color: #666;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    line-height: 1.5;
+    margin-bottom: 0;
+}
+
+/* 优化价格标签样式 */
+.scenic-card-cover .price {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #ff4d4f 0%, #ff7875 100%);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.scenic-card-cover .price-free {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #52c41a 0%, #73d13d 100%);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+.scenic-card-cover .price-unknown {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #faad14 0%, #ffc53d 100%);
+    color: white;
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 14px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+}
+
+/* 分页样式 */
+.pagination-container {
+    text-align: center;
+    margin-top: 30px;
+    padding-top: 20px;
+    border-top: 1px solid #f0f0f0;
+}
+
+/* 响应式布局 */
+@media (max-width: 992px) {
+    .content-container {
+        flex-direction: column;
+    }
+    
+    .filters-sidebar {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .scenic-header {
+        padding: 30px 0;
+    }
+    
+    .scenic-header h1 {
+        font-size: 2rem;
+    }
+    
+    .top-controls {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+    
+    .sort-container {
+        width: 100%;
+    }
+    
+    .sort-container .ant-select {
+        width: 100% !important;
+    }
+}
+
+/* 文化矩阵入口 */
+.cultural-matrix-entry {
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.view-matrix-btn {
+    margin-top: 10px;
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    border-radius: 4px;
+    color: #1890ff;
+    background-color: rgba(24, 144, 255, 0.1);
+    transition: all 0.3s;
+}
+
+.view-matrix-btn:hover {
+    background-color: rgba(24, 144, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+.view-matrix-btn .anticon {
+    margin-right: 5px;
+}
+
+/* 重构后的景点页面样式 */
+.scenic-page {
+    padding: 20px 0;
+}
+
+/* 搜索框样式 */
+.search-box {
+    margin-bottom: 20px;
+}
+
+/* 桌面端过滤器 */
+.desktop-filters {
+    display: block;
+}
+
+/* 移动端过滤按钮 */
+.mobile-filter-button {
+    display: none;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+/* 抽屉中的部分样式 */
+.drawer-section {
+    margin-bottom: 24px;
+}
+
+.drawer-section h3 {
+    margin-bottom: 16px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 标签云样式 */
+.tag-cloud {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 16px;
+}
+
+.tag-cloud .ant-tag-checkable {
+    margin-right: 0;
+    padding: 4px 8px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.tag-cloud .ant-tag-checkable:hover {
+    background-color: #f0f0f0;
+}
+
+.tag-cloud .ant-tag-checkable-checked {
+    background-color: #1890ff;
+    color: white;
+}
+
+/* 文化价值等级标签样式 */
+.value-level-tags {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* 过滤操作按钮容器 */
+.filter-actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+/* 分页容器样式 */
+.pagination-container {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 内容区域样式 */
+.content-area {
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 16px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .desktop-filters {
+        display: none;
+    }
+    
+    .mobile-filter-button {
+        display: block;
+    }
+    
+    .scenic-page {
+        padding: 12px;
+    }
+    
+    .content-area {
+        padding: 12px;
+    }
+}
+
+/* 时间轴组件自定义样式 */
+.time-axis-container {
+    margin-bottom: 20px;
+}
+
+.time-axis-container .timeline-node.active {
+    background-color: #e6f7ff;
+    border-color: #1890ff;
+    color: #1890ff;
+} 

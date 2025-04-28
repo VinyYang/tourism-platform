@@ -1,0 +1,720 @@
+.navbar {
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+.navbar-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 64px;
+    max-width: 1400px;
+    margin: 0 auto;
+    position: relative;
+    width: 100%;
+}
+
+.navbar-logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    flex-shrink: 0;
+    z-index: 200;
+    position: relative;
+}
+
+.navbar-logo a {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #1890ff;
+    text-decoration: none;
+    transition: color 0.3s;
+}
+
+.navbar-logo a:hover {
+    color: #40a9ff;
+}
+
+.navbar-menu {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    margin-left: 30px;
+    margin-right: 20px;
+    flex: 1;
+    justify-content: flex-start;
+    position: relative;
+    z-index: 200;
+    min-width: 300px;
+}
+
+.navbar-menu::-webkit-scrollbar {
+    display: none;
+}
+
+.navbar-item {
+    margin: 0 8px;
+    position: relative;
+    white-space: nowrap;
+    display: flex;
+    align-items: center;
+    z-index: 200;
+}
+
+.navbar-item a {
+    color: #333;
+    text-decoration: none;
+    padding: 20px 4px;
+    font-size: 1rem;
+    position: relative;
+    transition: all 0.3s;
+    display: inline-block;
+}
+
+.navbar-item a:hover {
+    color: #1890ff;
+}
+
+.navbar-item a.active {
+    color: #1890ff;
+    font-weight: 500;
+}
+
+.navbar-item a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 13px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 3px;
+    background-color: #1890ff;
+    border-radius: 3px;
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 1rem;
+    color: white;
+    padding: 0.5rem;
+}
+
+/* 用户信息和授权按钮容器，放在右侧 */
+.navbar-auth {
+    display: flex;
+    align-items: center;
+    z-index: 150;
+    flex-shrink: 0;
+    margin-left: auto;
+    position: relative;
+}
+
+/* 用户信息样式 */
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+/* 用户下拉菜单 */
+.user-dropdown {
+    margin-left: 15px;
+}
+
+/* 用户头像容器样式优化 */
+.user-avatar-container {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 6px 12px;
+    border-radius: 20px;
+    transition: all 0.3s;
+    white-space: nowrap;
+    background-color: rgba(0, 0, 0, 0.02);
+    border: 1px solid rgba(0, 0, 0, 0.06);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.03);
+}
+
+.user-avatar-container:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-color: rgba(24, 144, 255, 0.2);
+}
+
+/* 强化头像样式 */
+.user-avatar {
+    border: 2px solid #f0f0f0 !important;
+    transition: all 0.3s !important;
+    border-radius: 50% !important;
+    width: 32px !important;
+    height: 32px !important;
+    line-height: 32px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background-color: #e6f7ff !important;
+    color: #1890ff !important;
+    overflow: hidden !important;
+}
+
+/* 强制CSS选择器优先级，覆盖Ant Design默认样式 */
+.ant-avatar.user-avatar,
+.user-avatar.ant-avatar,
+.ant-avatar.ant-avatar-circle.user-avatar,
+.user-avatar.ant-avatar.ant-avatar-circle {
+    border-radius: 50% !important;
+    width: 32px !important;
+    height: 32px !important;
+    overflow: hidden !important;
+    box-sizing: content-box !important;
+}
+
+/* 确保头像内部元素也是圆形 */
+.user-avatar img,
+.user-avatar .ant-avatar-string {
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    text-align: center !important;
+    object-position: center !important;
+    transform: none !important;
+}
+
+.user-avatar:hover {
+    border-color: #1890ff;
+}
+
+.user-name {
+    margin: 0 10px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: #333;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    max-width: 120px;
+}
+
+.dropdown-icon {
+    font-size: 12px !important;
+    color: #999;
+    margin-left: 3px;
+}
+
+/* 新增 - 用户下拉菜单样式 */
+.user-dropdown-menu {
+    min-width: 180px;
+}
+
+.user-dropdown-menu .ant-dropdown-menu-item {
+    padding: 12px 20px;
+    display: flex;
+    align-items: center;
+}
+
+.user-dropdown-menu .ant-dropdown-menu-item-icon {
+    margin-right: 10px;
+    font-size: 16px;
+}
+
+/* 通知徽标样式 */
+.notification-badge .ant-badge-dot {
+    box-shadow: 0 0 0 1px #fff;
+    background-color: #ff4d4f;
+}
+
+/* 通知图标样式 */
+.notification-icon {
+    font-size: 20px;
+    margin-right: 15px;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+    background-color: rgba(0, 0, 0, 0.02);
+    padding: 6px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.notification-icon:hover {
+    color: #1890ff;
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+/* 新增 - 登录注册按钮样式 */
+.auth-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+/* 移动端菜单按钮 */
+.mobile-menu-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 25px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.mobile-menu-toggle span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    border-radius: 3px;
+    transition: all 0.3s;
+}
+
+.mobile-menu-toggle.active span:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+}
+
+.mobile-menu-toggle.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.mobile-menu-toggle.active span:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
+}
+
+/* 优化超大屏幕显示 */
+@media (min-width: 1400px) {
+    .navbar-menu {
+        margin-left: 50px;
+        margin-right: 50px;
+    }
+    
+    .navbar-item {
+        margin: 0 12px;
+    }
+    
+    .navbar-item a {
+        padding: 20px 6px;
+    }
+    
+    .more-menu-button {
+        padding: 20px 6px;
+        margin: 0 12px;
+    }
+}
+
+/* 调整大屏显示 */
+@media (max-width: 1400px) and (min-width: 1200px) {
+    .navbar-menu {
+        margin-left: 40px;
+        margin-right: 40px;
+    }
+    
+    .navbar-item {
+        margin: 0 15px;
+    }
+}
+
+@media (max-width: 1200px) {
+    .navbar-container {
+        padding: 0 20px;
+    }
+    
+    .navbar-menu {
+        margin-right: 20px;
+        min-width: 300px;
+        max-width: 60%;
+        flex-shrink: 1;
+    }
+    
+    .navbar-item {
+        margin: 0 6px;
+    }
+    
+    .navbar-item a {
+        padding: 20px 3px;
+    }
+    
+    .more-menu-button {
+        padding: 20px 3px;
+        margin: 0 6px;
+    }
+    
+    .navbar-auth {
+        margin-left: 15px;
+        flex-shrink: 0;    
+        min-width: 180px; 
+    }
+}
+
+@media (max-width: 992px) {
+    .navbar-container {
+        padding: 0 15px;
+    }
+    
+    .navbar-menu {
+        margin-left: 10px;
+        margin-right: 10px;
+        min-width: 200px;
+        max-width: 55%;
+        flex-shrink: 1; 
+    }
+    
+    .navbar-item {
+        margin: 0 4px;
+    }
+    
+    .navbar-item a {
+        padding: 20px 2px;
+        font-size: 0.9rem;
+    }
+    
+    .more-menu-button {
+        padding: 20px 2px;
+        margin: 0 4px;
+        font-size: 0.9rem;
+    }
+    
+    .navbar-auth {
+        margin-left: 10px;
+        flex-shrink: 0;    
+        min-width: 150px; 
+    }
+}
+
+@media (max-width: 870px) {
+    .navbar-auth {
+        margin-left: 8px;
+        flex-shrink: 0;    
+        min-width: 130px; 
+    }
+    
+    .notification-icon {
+        margin-right: 8px;
+    }
+}
+
+@media (max-width: 768px) {
+    .navbar-container {
+        padding: 0 10px;
+        justify-content: space-between;
+    }
+    
+    .navbar-auth {
+        margin-left: 8px;
+        order: 3;
+    }
+    
+    .navbar-menu {
+        position: fixed;
+        top: 64px;
+        left: -100%;
+        width: 100%;
+        height: calc(100vh - 64px);
+        background-color: #fff;
+        flex-direction: column;
+        padding: 20px 0;
+        transition: all 0.3s ease;
+        box-shadow: 0 6px 10px rgba(0, 0, 0, 0.1);
+        overflow-y: auto;
+        z-index: 1000;
+        margin: 0;
+        justify-content: flex-start;
+        align-items: center;
+        order: 4;
+    }
+    
+    .mobile-menu-toggle {
+        display: flex;
+        margin-right: 0;
+        order: 5;
+    }
+    
+    .hidden-mobile {
+        display: none;
+    }
+    
+    .visible-mobile {
+        display: block;
+    }
+    
+    .navbar-menu.active {
+        left: 0;
+        opacity: 1;
+        visibility: visible;
+    }
+    
+    .navbar-item {
+        width: 100%;
+        text-align: center;
+        margin: 8px 0;
+    }
+    
+    .navbar-item a {
+        display: block;
+        padding: 12px 20px;
+        width: 100%;
+        font-size: 1rem;
+    }
+    
+    .navbar-item a.active::after {
+        display: none;
+    }
+    
+    .navbar-menu .action-buttons {
+        display: none;
+    }
+    
+    .navbar-submenu-container {
+        width: 100%;
+        text-align: center;
+    }
+    
+    .more-menu-button {
+        width: 80%;
+        justify-content: center;
+        padding: 10px;
+        margin: 10px auto;
+        border-radius: 4px;
+        background-color: rgba(0, 0, 0, 0.02);
+        font-weight: 500;
+    }
+    
+    .navbar-submenu {
+        position: static;
+        display: none;
+        box-shadow: none;
+        border: none;
+        width: 100%;
+        padding: 0;
+        margin: 5px 0 15px;
+        background-color: rgba(0, 0, 0, 0.02);
+    }
+    
+    .navbar-submenu.active {
+        display: block;
+    }
+    
+    .user-avatar-container {
+        padding: 5px 8px;
+    }
+    
+    .notification-icon {
+        margin-right: 8px;
+        font-size: 18px;
+    }
+    
+    .user-name {
+        max-width: 80px;
+    }
+}
+
+/* 暗色模式适配 */
+body.dark .navbar {
+    background-color: #1f1f1f;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+body.dark .navbar-logo a {
+    color: #40a9ff;
+}
+
+body.dark .navbar-logo a:hover {
+    color: #69c0ff;
+}
+
+body.dark .navbar-item a {
+    color: #ccc;
+}
+
+body.dark .navbar-item a:hover {
+    color: #fff;
+}
+
+body.dark .navbar-item a.active {
+    color: #66bfff;
+    font-weight: 500;
+}
+
+body.dark .navbar-item a.active::after {
+    background-color: #66bfff;
+}
+
+body.dark .user-avatar-container:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .username {
+    color: #e0e0e0;
+}
+
+body.dark .dropdown-icon {
+    color: #aaa;
+}
+
+body.dark .mobile-menu-toggle span {
+    background-color: #ccc;
+}
+
+body.dark .navbar-menu {
+    background-color: #1f1f1f;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .navbar-item .ant-btn-primary {
+    background-color: #40a9ff;
+    border-color: #40a9ff;
+    color: #fff;
+}
+body.dark .navbar-item .ant-btn-primary:hover {
+    background-color: #69c0ff;
+    border-color: #69c0ff;
+}
+body.dark .navbar-item .ant-btn-default {
+     background-color: rgba(255, 255, 255, 0.1);
+     border-color: #555;
+     color: #ccc;
+}
+body.dark .navbar-item .ant-btn-default:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+     border-color: #777;
+     color: #fff;
+}
+
+body.dark .auth-buttons .ant-btn-default {
+     background-color: rgba(255, 255, 255, 0.1);
+     border-color: #555;
+     color: #ccc;
+}
+body.dark .auth-buttons .ant-btn-default:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+     border-color: #777;
+     color: #fff;
+}
+
+/* 添加导航子菜单容器 */
+.navbar-submenu-container {
+    position: relative;
+}
+
+/* 导航子菜单样式 */
+.navbar-submenu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #fff;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border-radius: 4px;
+    padding: 8px 0;
+    min-width: 160px;
+    z-index: 1000;
+    display: none;
+    flex-direction: column;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+}
+
+.navbar-submenu.active {
+    display: flex;
+}
+
+.navbar-submenu .navbar-item {
+    width: 100%;
+    margin: 0;
+}
+
+.navbar-submenu .navbar-item a {
+    padding: 10px 16px;
+    width: 100%;
+    display: block;
+    text-align: left;
+}
+
+.navbar-submenu .navbar-item a.active::after {
+    display: none;
+}
+
+/* 更多菜单按钮样式 */
+.more-menu-button {
+    background: none;
+    border: none;
+    display: flex;
+    align-items: center;
+    color: #333;
+    cursor: pointer;
+    padding: 20px 4px;
+    font-size: 1rem;
+    margin: 0 8px;
+}
+
+.more-menu-button:hover {
+    color: #1890ff;
+}
+
+.more-menu-button .anticon {
+    margin-left: 4px;
+    font-size: 12px;
+}
+
+/* 暗色模式子菜单样式 */
+body.dark .navbar-submenu {
+    background-color: #1f1f1f;
+    border-color: #333;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+body.dark .more-menu-button {
+    color: #ccc;
+}
+
+body.dark .more-menu-button:hover {
+    color: #fff;
+}
+
+body.dark .navbar-submenu .navbar-item a {
+    color: #ccc;
+}
+
+body.dark .navbar-submenu .navbar-item a:hover {
+    color: #fff;
+}
+
+/* 强制覆盖所有默认和继承的头像样式 */
+.user-avatar-container .ant-avatar img,
+.user-avatar img,
+.ant-avatar.user-avatar img,
+.ant-avatar-circle img,
+.ant-avatar-image img {
+    width: 32px !important;
+    height: 32px !important;
+    object-fit: cover !important;
+    border-radius: 50% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
+    aspect-ratio: 1 !important;
+    object-position: center !important;
+    max-width: none !important;
+    min-height: 32px !important;
+}
+
+/* 解决非正方形图片问题 - 强制保持比例和居中裁剪 */
+.user-avatar-container .ant-avatar,
+.user-avatar-container .ant-avatar-image {
+    position: relative !important;
+    overflow: hidden !important;
+    width: 32px !important;
+    height: 32px !important;
+    border-radius: 50% !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+} 

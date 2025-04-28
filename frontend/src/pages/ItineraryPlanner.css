@@ -1,0 +1,281 @@
+.itinerary-planner-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* 加载状态 */
+.itinerary-loading {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 400px;
+}
+
+.itinerary-loading p {
+    margin-top: 16px;
+    color: #666;
+}
+
+/* 头部区域 */
+.itinerary-header {
+    margin-bottom: 24px;
+}
+
+.itinerary-title-input {
+    font-size: 24px;
+    font-weight: bold;
+    height: auto;
+    padding: 8px 12px;
+    border-radius: 4px;
+}
+
+.itinerary-title-input:focus {
+    box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.itinerary-actions {
+    display: flex;
+    gap: 8px;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+}
+
+.itinerary-meta-row {
+    margin-top: 16px;
+}
+
+.date-range-picker {
+    width: 100%;
+}
+
+.itinerary-days-control {
+    display: flex;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+/* 行程天数容器 */
+.itinerary-days-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    margin-bottom: 40px;
+}
+
+/* 分享相关 */
+.share-link {
+    padding: 12px;
+    background-color: #f5f5f5;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-top: 12px;
+    word-break: break-all;
+    text-align: center;
+}
+
+/* 自定义项目表单 */
+.custom-item-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 8px;
+}
+
+/* 导出按钮 */
+.export-buttons {
+    display: flex;
+    gap: 8px;
+    margin-top: 12px;
+    justify-content: center;
+}
+
+/* 搜索抽屉 */
+.search-drawer-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.search-loading {
+    display: flex;
+    justify-content: center;
+    padding: 40px 0;
+}
+
+.search-placeholder {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    color: #999;
+    text-align: center;
+}
+
+.search-result-image {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 4px;
+}
+
+.add-to-day-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    margin-top: 8px;
+}
+
+/* 响应式调整 */
+@media (max-width: 576px) {
+    .itinerary-actions {
+        justify-content: flex-start;
+        margin-top: 12px;
+    }
+    
+    .itinerary-title-input {
+        font-size: 20px;
+    }
+}
+
+/* 拖拽相关样式 */
+.drag-item {
+    opacity: 0.8;
+    cursor: move;
+}
+
+.drop-indicator {
+    height: 2px;
+    background-color: #1890ff;
+    margin: 4px 0;
+    transition: all 0.2s;
+}
+
+.day-drop-indicator {
+    border: 2px dashed #1890ff;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 8px 0;
+    background-color: rgba(24, 144, 255, 0.1);
+    text-align: center;
+    color: #1890ff;
+}
+
+/* 主布局样式改进 */
+.itinerary-planner {
+    min-height: calc(100vh - 64px);
+    padding: 20px;
+    background: #f0f2f5;
+}
+
+.itinerary-content {
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+/* 卡片组件样式美化 */
+.info-card {
+    height: 100%;
+    transition: all 0.3s;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.info-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.info-card .ant-card-head {
+    background-color: #fafafa;
+    border-bottom: 1px solid #f0f0f0;
+    padding: 0 16px;
+}
+
+/* 预算相关样式 */
+.total-budget-summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 0;
+}
+
+.day-budget-summary {
+    font-size: 14px;
+    color: rgba(0, 0, 0, 0.65);
+    padding: 8px 16px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+/* 预算超出警告样式 */
+.budget-exceeded {
+    color: #cf1322;
+    font-weight: 500;
+}
+
+.budget-normal {
+    color: #3f8600;
+    font-weight: 500;
+}
+
+/* 响应式布局调整 */
+@media (max-width: 768px) {
+    .itinerary-planner {
+        padding: 10px;
+    }
+    
+    .info-card {
+        margin-bottom: 16px;
+    }
+}
+
+/* 日期选择器样式优化 */
+.ant-picker-range {
+    width: 100% !important;
+}
+
+/* 预算输入框样式优化 */
+.ant-input-number-group-wrapper {
+    width: 100%;
+}
+
+.ant-input-number-wrapper-custom-addon {
+    width: 100%;
+}
+
+/* 标签样式美化 */
+.ant-tag-error {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 12px;
+    padding: 2px 8px;
+}
+
+/* 必填字段标记样式 */
+.required-field::after {
+    content: '*';
+    color: #ff4d4f;
+    margin-left: 4px;
+}
+
+/* 设置Items列表中价格标签的样式 */
+.item-price-tag {
+    margin-left: 8px;
+    color: #faad14;
+}
+
+/* 上次保存时间显示 */
+.last-saved-time {
+    font-size: 12px;
+    color: #8c8c8c;
+    margin-top: 4px;
+}
+
+/* 自动保存指示器 */
+.auto-save-indicator {
+    font-size: 12px;
+    color: #8c8c8c;
+    margin-left: 8px;
+} 

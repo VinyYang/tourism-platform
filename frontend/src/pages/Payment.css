@@ -1,0 +1,197 @@
+.payment-container {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.payment-card {
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    border-radius: 8px;
+}
+
+.payment-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.payment-header {
+    margin-bottom: 20px;
+}
+
+.payment-steps {
+    margin: 30px 0;
+}
+
+.payment-content {
+    padding: 20px 0;
+}
+
+/* 确认订单步骤 */
+.payment-order-details {
+    margin-bottom: 24px;
+}
+
+.payment-items {
+    margin: 20px 0;
+}
+
+.payment-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 16px 0;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.payment-item:last-child {
+    border-bottom: none;
+}
+
+.payment-item-info {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.payment-item-price {
+    text-align: right;
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.payment-total {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.payment-total-amount {
+    font-size: 24px;
+    color: #f5222d;
+    margin-left: 12px;
+}
+
+/* 支付方式步骤 */
+.payment-method-options {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin: 24px 0;
+}
+
+.payment-method-option {
+    padding: 16px;
+    border: 1px solid #f0f0f0;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin: 0 !important;
+    transition: all 0.3s;
+}
+
+.payment-method-option:hover {
+    border-color: #1890ff;
+}
+
+.payment-method-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-left: 8px;
+}
+
+.payment-method-logo {
+    width: 80px;
+    height: 40px;
+    object-fit: contain;
+}
+
+.payment-summary {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.payment-amount {
+    font-size: 22px;
+    color: #f5222d;
+    margin-left: 12px;
+}
+
+.payment-note {
+    text-align: center;
+    margin: 20px 0;
+}
+
+/* 支付结果步骤 */
+.payment-result-step {
+    padding: 20px 0;
+}
+
+/* 操作按钮 */
+.payment-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 12px;
+    margin-top: 30px;
+}
+
+.payment-item-image {
+    width: 120px;
+    height: 80px;
+    object-fit: cover;
+    border-radius: 4px;
+    margin-right: 16px;
+}
+
+/* 响应式调整 */
+@media (max-width: 576px) {
+    .payment-container {
+        margin: 20px auto;
+        padding: 0 10px;
+    }
+
+    .payment-card {
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    }
+
+    .payment-item {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .payment-item-price {
+        text-align: left;
+    }
+
+    .payment-method-option {
+        padding: 12px;
+    }
+
+    .payment-method-logo {
+        width: 60px;
+        height: 30px;
+    }
+
+    .payment-actions {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .payment-actions button {
+        width: 100%;
+    }
+
+    .payment-item-image {
+        width: 100%;
+        height: 160px;
+        margin-right: 0;
+        margin-bottom: 10px;
+    }
+} 

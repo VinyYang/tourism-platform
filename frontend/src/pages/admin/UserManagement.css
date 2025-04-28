@@ -1,0 +1,55 @@
+.user-management {
+    padding-bottom: 20px;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+.search-card {
+    margin-bottom: 20px;
+}
+
+.search-form .ant-form-item {
+    margin-bottom: 16px;
+}
+
+.table-operations {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.user-info {
+    display: flex;
+    align-items: center;
+}
+
+.user-avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    margin-right: 12px;
+    object-fit: cover;
+}
+
+.user-nickname {
+    font-size: 12px;
+    color: #999;
+    margin-top: 4px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .table-operations {
+        flex-direction: column;
+        gap: 12px;
+    }
+    
+    .table-operations button {
+        margin-bottom: 12px;
+    }
+} 

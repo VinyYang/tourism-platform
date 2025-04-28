@@ -1,0 +1,92 @@
+/* 
+ * 安全图片组件样式
+ */
+
+.safe-image-container {
+  position: relative;
+  overflow: hidden;
+}
+
+/* 图片样式 */
+.safe-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: opacity 0.3s ease, filter 0.3s ease;
+}
+
+/* 状态样式 */
+.safe-image-loading {
+  opacity: 0;
+}
+
+.safe-image-loaded {
+  opacity: 1;
+}
+
+.safe-image-error {
+  opacity: 1;
+}
+
+/* 模糊效果 */
+.safe-image-blur {
+  filter: blur(5px);
+}
+
+/* 占位元素 */
+.safe-image-placeholder {
+  display: block;
+  background-color: #f0f2f5;
+  width: 100%;
+  height: 100%;
+  min-height: 50px;
+}
+
+/* 针对不同类型的图片样式 */
+.safe-image-container.avatar-container {
+  border-radius: 50%;
+  overflow: hidden;
+}
+
+.safe-image-container.avatar-container .safe-image {
+  border-radius: 50%;
+}
+
+.safe-image-container.cover-container {
+  width: 100%;
+  height: auto;
+}
+
+.safe-image-container.rounded-container {
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.safe-image-container.rounded-container .safe-image {
+  border-radius: 8px;
+}
+
+/* 动画效果 */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.safe-image-loaded {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* 异常状态处理 */
+.safe-image-container.error-container {
+  background-color: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: #999;
+  font-size: 12px;
+} 

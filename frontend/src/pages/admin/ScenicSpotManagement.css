@@ -1,0 +1,93 @@
+/* 管理页面容器 */
+.scenic-management-container {
+  padding: 20px;
+}
+
+/* 表格样式优化 */
+.ant-table-wrapper {
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+/* 统计卡片样式 */
+.stats-card {
+  margin-bottom: 16px;
+}
+
+/* 自定义地图标记样式 */
+.amap-marker-label {
+  border: 1px solid #ddd;
+  border-radius: 3px;
+  background-color: white;
+  padding: 6px 10px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* 坐标标签样式 */
+.coordinate-tag {
+  font-family: monospace;
+}
+
+/* 导入表单样式 */
+.import-form {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.upload-dragger {
+  padding: 30px;
+  background: #fafafa;
+  border: 1px dashed #d9d9d9;
+  border-radius: 4px;
+  margin-bottom: 24px;
+  text-align: center;
+}
+
+.upload-hint {
+  color: rgba(0, 0, 0, 0.45);
+  margin-top: 12px;
+}
+
+/* 表单样式优化 */
+.scenic-form {
+  max-width: 800px;
+}
+
+/* 响应式适配 */
+@media (max-width: 768px) {
+  .scenic-form {
+    max-width: 100%;
+  }
+  
+  .coordinate-inputs {
+    flex-direction: column;
+  }
+}
+
+/* 统计面板样式 */
+.stats-panel {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-bottom: 16px;
+}
+
+.stats-item {
+  flex: 1;
+  min-width: 200px;
+  background-color: white;
+  padding: 16px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.stats-number {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 8px;
+}
+
+.stats-label {
+  color: rgba(0, 0, 0, 0.65);
+} 

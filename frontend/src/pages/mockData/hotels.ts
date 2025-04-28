@@ -1,0 +1,135 @@
+import { Hotel } from '../../api/hotel';
+
+// 更新模拟酒店数据，使用可靠的图片链接
+export const MOCK_HOTELS: Hotel[] = [
+    {
+        id: 1,
+        name: '北京国际大酒店',
+        city: '北京',
+        address: '北京市朝阳区建国门外大街1号',
+        type: '豪华酒店',
+        price: 1200,
+        rating: 4.8,
+        facilities: ['免费WiFi', '停车场', '游泳池', '健身中心', '餐厅', 'SPA', '会议室', '行李寄存'],
+        images: ['https://images.unsplash.com/photo-1566073771259-6a8506099945?w=800&auto=format&fit=crop'],
+        description: '北京国际大酒店是一家五星级豪华酒店，位于市中心繁华地段，毗邻各大商业区和旅游景点。',
+        stars: 5
+    },
+    {
+        id: 2,
+        name: '上海花园酒店',
+        city: '上海',
+        address: '上海市黄浦区南京东路58号',
+        type: '商务酒店',
+        price: 880,
+        rating: 4.6,
+        facilities: ['免费WiFi', '停车场', '健身中心', '餐厅', '会议室', '行李寄存'],
+        images: ['https://images.unsplash.com/photo-1551882547-ff40c63fe5fa?w=800&auto=format&fit=crop'],
+        description: '上海花园酒店是一家四星级商务酒店，位于上海市中心，交通便利，环境优美。',
+        stars: 4
+    },
+    {
+        id: 3,
+        name: '成都锦江酒店',
+        city: '成都',
+        address: '成都市锦江区人民南路二段55号',
+        type: '商务酒店',
+        price: 650,
+        rating: 4.5,
+        facilities: ['免费WiFi', '停车场', '健身中心', '餐厅'],
+        images: ['https://images.unsplash.com/photo-1519974719765-e6559eac2575?w=800&auto=format&fit=crop'],
+        description: '成都锦江酒店位于成都市中心锦江区，毗邻春熙路商圈，是成都历史悠久的高档酒店。',
+        stars: 4
+    },
+    {
+        id: 4,
+        name: '三亚亚龙湾度假酒店',
+        city: '三亚',
+        address: '海南省三亚市亚龙湾国家旅游度假区',
+        type: '度假酒店',
+        price: 1280,
+        rating: 4.7,
+        facilities: ['免费WiFi', '私人海滩', '游泳池', '健身中心', 'SPA', '水上运动'],
+        images: ['https://images.unsplash.com/photo-1520250497591-112f2f40a3f4?w=800&auto=format&fit=crop'],
+        description: '坐落于亚龙湾的海滨度假酒店，拥有私人海滩和热带花园，是休闲度假的理想之选。',
+        stars: 5
+    },
+    {
+        id: 5,
+        name: '杭州西子湖四季酒店',
+        city: '杭州',
+        address: '杭州市西湖区灵隐路5号',
+        type: '豪华酒店',
+        price: 2100,
+        rating: 4.9,
+        facilities: ['免费WiFi', '停车场', '游泳池', '健身中心', 'SPA', '湖景房'],
+        images: ['https://images.unsplash.com/photo-1542314831-068cd1dbfeeb?w=800&auto=format&fit=crop'],
+        description: '坐落于西湖边的奢华酒店，融合中式园林风格，提供无与伦比的湖景体验。',
+        stars: 5
+    },
+    {
+        id: 6,
+        name: '重庆解放碑智选假日酒店',
+        city: '重庆',
+        address: '重庆市渝中区民权路38号',
+        type: '经济酒店',
+        price: 380,
+        rating: 4.3,
+        facilities: ['免费WiFi', '停车场', '餐厅'],
+        images: ['https://images.unsplash.com/photo-1580977276076-ae4b8c219b2e?w=800&auto=format&fit=crop'],
+        description: '位于重庆商业中心的酒店，交通便利，适合商务和休闲旅行。',
+        stars: 3
+    },
+    {
+        id: 7,
+        name: '广州白天鹅宾馆',
+        city: '广州',
+        address: '广州市越秀区沿江东路1号',
+        type: '豪华酒店',
+        price: 1080,
+        rating: 4.7,
+        facilities: ['免费WiFi', '停车场', '游泳池', '健身中心', '餐厅', 'SPA'],
+        images: ['https://images.unsplash.com/photo-1590073242678-70ee3fc28f8a?w=800&auto=format&fit=crop'],
+        description: '广州地标性酒店，位于珠江畔，拥有一流的设施和服务。',
+        stars: 5
+    },
+    {
+        id: 8,
+        name: '西安钟楼智选假日酒店',
+        city: '西安',
+        address: '西安市碑林区东大街118号',
+        type: '商务酒店',
+        price: 560,
+        rating: 4.4,
+        facilities: ['免费WiFi', '停车场', '健身中心', '餐厅'],
+        images: ['https://images.unsplash.com/photo-1606402179428-a57976d71fa4?w=800&auto=format&fit=crop'],
+        description: '位于西安市中心的酒店，步行即可到达钟楼、鼓楼和回民街等景点。',
+        stars: 4
+    },
+    {
+        id: 9,
+        name: '厦门鼓浪屿海景酒店',
+        city: '厦门',
+        address: '厦门市思明区鼓浪屿龙头路18号',
+        type: '度假酒店',
+        price: 980,
+        rating: 4.8,
+        facilities: ['免费WiFi', '海景房', '餐厅', 'SPA'],
+        images: ['https://images.unsplash.com/photo-1571003123894-1f0594d2b5d9?w=800&auto=format&fit=crop'],
+        description: '鼓浪屿上的海景酒店，拥有无敌海景，感受文艺小岛的独特魅力。',
+        stars: 5
+    },
+    {
+        id: 10,
+        name: '青岛海景花园酒店',
+        city: '青岛',
+        address: '青岛市市南区香港中路9号',
+        type: '度假酒店',
+        price: 820,
+        rating: 4.6,
+        facilities: ['免费WiFi', '停车场', '游泳池', '健身中心', '海景房'],
+        images: ['https://images.unsplash.com/photo-1540541338287-41700207dee6?w=800&auto=format&fit=crop'],
+        description: '临近青岛海滩的酒店，可欣赏到美丽的海景和栈桥风光。',
+        stars: 4
+    }
+]; 

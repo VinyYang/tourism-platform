@@ -1,0 +1,615 @@
+/* ChinaMapStyles.css - 地图组件样式 */
+
+/* 地图容器样式 */
+.map-container {
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  background-color: #e6f2ff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  position: relative;
+  overflow: hidden;
+}
+
+/* 地图指引提示样式 */
+.map-guide {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(0, 0, 0, 0.75);
+  color: white;
+  padding: 20px 30px;
+  border-radius: 12px;
+  text-align: center;
+  z-index: 900;
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+  max-width: 80%;
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  animation: fadeIn 0.5s ease;
+}
+
+.map-guide h3 {
+  margin: 0 0 10px 0;
+  color: white;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.map-guide p {
+  margin: 0;
+  font-size: 14px;
+  opacity: 0.9;
+}
+
+/* 票务信息面板样式 */
+.ticket-panel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 40%;
+  max-width: 450px;
+  max-height: calc(100% - 20px);
+  overflow: auto;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.95);
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transition: all 0.3s ease;
+  border: 1px solid #f0f0f0;
+  animation: slideInRight 0.3s ease;
+  padding-bottom: 10px;
+}
+
+/* 添加隐藏/显示票务面板的状态样式 */
+.ticket-panel.show {
+  transform: translateX(0);
+  opacity: 1;
+  visibility: visible;
+}
+
+.ticket-panel.hide {
+  transform: translateX(calc(100% + 50px));
+  opacity: 0;
+  visibility: hidden;
+}
+
+/* 隐藏/显示按钮样式 */
+.toggle-ticket-panel-btn {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  width: 24px;
+  height: 80px;
+  background-color: rgba(255, 255, 255, 0.9);
+  border: 1px solid #e0e0e0;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  box-shadow: -2px 0 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  z-index: 999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  color: #1890ff;
+  transition: all 0.3s ease;
+}
+
+.toggle-ticket-panel-btn:hover {
+  background-color: #1890ff;
+  color: white;
+}
+
+.toggle-ticket-panel-btn:focus {
+  outline: none;
+}
+
+.ticket-panel:hover {
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.2);
+}
+
+.train-panel {
+  margin-bottom: 15px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.flight-panel {
+  margin-bottom: 5px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* 全部模式下的分隔线 */
+.ticket-panel .train-panel + .flight-panel {
+  position: relative;
+  margin-top: 30px;
+}
+
+.ticket-panel .train-panel + .flight-panel:before {
+  content: "其他交通方式";
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #f0f0f0;
+  padding: 2px 10px;
+  border-radius: 10px;
+  font-size: 12px;
+  color: #666;
+}
+
+/* 修复标记点样式 - 直接针对高德地图标记元素 */
+.amap-marker {
+  transition: all 0.3s ease !important;
+  transform-origin: center bottom !important;
+}
+
+.amap-marker:hover {
+  transform: translate(-15px, -30px) scale(1.15) !important;
+}
+
+/* 标记点内容样式 */
+.amap-marker > div {
+  width: 40px;
+  height: 40px;
+  position: relative;
+}
+
+/* 样式应用到内部嵌套元素 */
+.amap-marker > div > div {
+  width: 36px;
+  height: 36px;
+  background-color: #1890ff;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid white;
+  z-index: 2;
+}
+
+/* 标记点小箭头 */
+.amap-marker > div > div:after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #1890ff;
+  z-index: 1;
+}
+
+/* 数字标签样式 */
+.amap-marker > div > div > div {
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  text-align: center;
+}
+
+/* 脉冲动画效果 */
+.amap-marker:before {
+  content: '';
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(24, 144, 255, 0.3);
+  border-radius: 50%;
+  z-index: 0;
+  animation: pulse 2s infinite;
+}
+
+/* 选中状态的标记点 */
+.amap-marker[title*="出发"] > div > div,
+.amap-marker[data-selected="true"] > div > div {
+  background-color: #52c41a;
+}
+
+.amap-marker[title*="出发"] > div > div:after,
+.amap-marker[data-selected="true"] > div > div:after {
+  border-top-color: #52c41a;
+}
+
+.amap-marker[title*="出发"]:before,
+.amap-marker[data-selected="true"]:before {
+  background-color: rgba(82, 196, 26, 0.3);
+}
+
+/* 目标城市的标记点 */
+.amap-marker[title*="目的"] > div > div,
+.amap-marker[data-target="true"] > div > div {
+  background-color: #fa8c16;
+}
+
+.amap-marker[title*="目的"] > div > div:after,
+.amap-marker[data-target="true"] > div > div:after {
+  border-top-color: #fa8c16;
+}
+
+.amap-marker[title*="目的"]:before,
+.amap-marker[data-target="true"]:before {
+  background-color: rgba(250, 140, 22, 0.3);
+}
+
+/* 自定义标记点样式 */
+.custom-marker {
+  position: relative;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  transition: all 0.3s ease;
+  transform-origin: center bottom;
+}
+
+.custom-marker:hover {
+  transform: scale(1.15);
+}
+
+.marker-icon {
+  width: 36px;
+  height: 36px;
+  background-color: #1890ff;
+  border-radius: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  border: 2px solid white;
+  z-index: 2;
+}
+
+.marker-icon::after {
+  content: '';
+  position: absolute;
+  bottom: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 8px solid transparent;
+  border-right: 8px solid transparent;
+  border-top: 10px solid #1890ff;
+  z-index: 1;
+}
+
+.pulse-circle {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(24, 144, 255, 0.3);
+  border-radius: 50%;
+  z-index: 1;
+  animation: pulse 2s infinite;
+}
+
+.selected-marker .marker-icon {
+  background-color: #52c41a;
+}
+
+.selected-marker .marker-icon::after {
+  border-top-color: #52c41a;
+}
+
+.selected-marker .pulse-circle {
+  background-color: rgba(82, 196, 26, 0.3);
+}
+
+.target-marker .marker-icon {
+  background-color: #fa8c16;
+}
+
+.target-marker .marker-icon::after {
+  border-top-color: #fa8c16;
+}
+
+.target-marker .pulse-circle {
+  background-color: rgba(250, 140, 22, 0.3);
+}
+
+.marker-label {
+  position: absolute;
+  top: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 3px 8px;
+  border-radius: 4px;
+  font-size: 12px;
+  white-space: nowrap;
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  pointer-events: none;
+}
+
+.custom-marker:hover .marker-label {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* 自定义信息窗口样式 */
+.custom-info-window {
+  min-width: 240px;
+  max-width: 300px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15);
+  overflow: hidden;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+}
+
+.info-window-title {
+  display: flex;
+  align-items: center;
+  padding: 12px 16px;
+  background-color: #f5f5f5;
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+}
+
+.info-window-title.selected-city {
+  background-color: #f6ffed;
+  border-bottom: 1px solid #b7eb8f;
+}
+
+.info-window-title.target-city {
+  background-color: #fff7e6;
+  border-bottom: 1px solid #ffd591;
+}
+
+.city-icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #1890ff;
+  border-radius: 50%;
+  margin-right: 8px;
+  position: relative;
+}
+
+.selected-icon {
+  background-color: #52c41a;
+}
+
+.target-icon {
+  background-color: #fa8c16;
+}
+
+.info-window-content {
+  padding: 12px 16px;
+}
+
+.city-status {
+  margin: 0 0 12px 0;
+  color: #666;
+  font-size: 14px;
+}
+
+.city-actions {
+  display: flex;
+  gap: 8px;
+}
+
+.action-button {
+  flex: 1;
+  padding: 8px 12px;
+  border: 1px solid #d9d9d9;
+  border-radius: 4px;
+  background-color: white;
+  font-size: 13px;
+  cursor: pointer;
+  transition: all 0.3s;
+  color: #333;
+  text-align: center;
+}
+
+.action-button:hover {
+  border-color: #1890ff;
+  color: #1890ff;
+}
+
+.select-origin {
+  background-color: #f6ffed;
+  border-color: #b7eb8f;
+}
+
+.select-origin:hover {
+  background-color: #d9f7be;
+  border-color: #52c41a;
+  color: #135200;
+}
+
+.select-dest {
+  background-color: #fff7e6;
+  border-color: #ffd591;
+}
+
+.select-dest:hover {
+  background-color: #ffe7ba;
+  border-color: #fa8c16;
+  color: #613400;
+}
+
+/* 动画效果 */
+@keyframes pulse {
+  0% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.7;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.1);
+    opacity: 0.3;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(0.95);
+    opacity: 0.7;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(40px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+/* 高德地图默认控件样式优化 */
+.amap-logo {
+  opacity: 0.6 !important;
+}
+
+.amap-copyright {
+  opacity: 0.7 !important;
+  font-size: 10px !important;
+}
+
+/* 适配高分辨率屏幕 */
+@media screen and (min-resolution: 2dppx) {
+  .amap-logo {
+    transform: scale(0.8);
+    transform-origin: right bottom;
+  }
+  
+  .amap-copyright {
+    font-size: 9px;
+  }
+  
+  .amap-toolbar, .amap-scale {
+    transform: scale(0.95);
+    transform-origin: right bottom;
+  }
+}
+
+/* 信息窗口样式 - 全面升级 */
+.amap-info-contentContainer {
+  border-radius: 8px !important;
+  overflow: hidden !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.15) !important;
+  padding: 0 !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+  background: white !important;
+  width: 280px !important;
+  position: relative !important;
+}
+
+/* 信息窗口内部样式 */
+.info-window {
+  padding: 12px;
+  max-width: 300px;
+}
+
+.info-window h4 {
+  margin: 0 0 8px 0;
+  font-size: 16px;
+  color: #1890ff;
+  font-weight: bold;
+}
+
+.info-window p {
+  margin: 5px 0;
+  color: #666;
+}
+
+.spot-description {
+  margin-top: 10px;
+  padding: 8px;
+  background-color: #f5f5f5;
+  border-radius: 4px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: #333;
+  max-height: 120px;
+  overflow-y: auto;
+  border-left: 3px solid #1890ff;
+}
+
+/* 标题区域 */
+.amap-info-contentContainer > div > div:nth-child(2) {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center !important;
+  padding: 12px 16px !important;
+  background: linear-gradient(135deg, #1890ff 0%, #096dd9 100%) !important;
+  color: white !important;
+  font-weight: bold !important;
+  font-size: 16px !important;
+  position: relative !important;
+}
+
+/* 景点序号样式 */
+.amap-info-contentContainer > div > div:nth-child(2) > span:last-child {
+  display: inline-block !important;
+  background-color: white !important;
+  color: #1890ff !important;
+  width: 24px !important;
+  height: 24px !important;
+  border-radius: 50% !important;
+  text-align: center !important;
+  line-height: 24px !important;
+  font-size: 14px !important;
+  font-weight: bold !important;
+  margin-left: 8px !important;
+}
+
+/* 移除景点图标 */
+.amap-info-contentContainer > div > div:first-child {
+  display: none !important;
+}
+
+/* 景点描述 */
+.amap-info-contentContainer > div > div:nth-child(3) {
+  padding: 16px !important;
+  color: #333333 !important;
+  font-size: 14px !important;
+  line-height: 1.6 !important;
+  border-bottom: none !important; /* 移除底部边框 */
+}
+
+/* 移除底部操作区 */
+.amap-info-contentContainer > div > div:nth-child(4) {
+  display: none !important; /* 完全隐藏底部区域 */
+}
+
+/* 移除底部按钮 */
+.amap-info-contentContainer > div > div:nth-child(4)::before,
+.amap-info-contentContainer > div > div:nth-child(4)::after {
+  display: none !important;
+}
+
+/* 信息窗口小箭头样式 */
+.amap-info-sharp {
+  background-color: white !important;
+} 

@@ -1,0 +1,77 @@
+.strategy-create-container {
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.strategy-create-card {
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.editor-container {
+    margin-bottom: 30px;
+    border: 1px solid #d9d9d9;
+    border-radius: 4px;
+}
+
+.editor-container .quill {
+    border: none;
+    height: 350px;
+}
+
+.editor-hint, .upload-hint {
+    color: #888;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.custom-tags {
+    margin-top: 8px;
+}
+
+.custom-tags-title {
+    margin-bottom: 8px;
+    color: rgba(0, 0, 0, 0.85);
+    font-size: 14px;
+}
+
+.custom-tags-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.form-actions {
+    margin-top: 24px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 富文本编辑器相关样式 */
+.ql-toolbar {
+    border-bottom: 1px solid #d9d9d9 !important;
+    background-color: #fafafa;
+}
+
+.ql-container {
+    font-size: 16px;
+    background-color: white;
+}
+
+.ql-editor {
+    min-height: 300px;
+    max-height: 600px;
+    overflow-y: auto;
+}
+
+/* 响应式布局调整 */
+@media (max-width: 768px) {
+    .strategy-create-container {
+        padding: 10px;
+    }
+    
+    .editor-container .quill {
+        height: 250px;
+    }
+} 

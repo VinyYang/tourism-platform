@@ -1,0 +1,111 @@
+/* 全局主题样式 */
+
+/* 亮色主题 (默认) */
+body.light {
+  background-color: #ffffff; /* 白色背景 */
+  color: #333333; /* 深灰色文字 */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 暗色主题 */
+body.dark {
+  background-color: #1a1a1a; /* 深灰色背景 */
+  color: #e0e0e0; /* 浅灰色文字 */
+}
+
+/* 你可以在这里添加更多基于 .light 和 .dark 类的主题样式 */
+
+/* 例如：暗色模式下的链接颜色 */
+body.dark a {
+  color: #66bfff; /* 亮蓝色 */
+}
+body.dark a:hover {
+  color: #8ccfff;
+}
+
+/* Ant Design 组件的全局样式覆盖 */
+body.dark .ant-table {
+  background-color: #262626 !important; /* 表格背景 */
+  color: #e0e0e0 !important;
+}
+body.dark .ant-table-thead > tr > th {
+  background: #333 !important;
+  color: #fff !important;
+  border-bottom: 1px solid #555 !important;
+}
+body.dark .ant-table-tbody > tr > td {
+  border-bottom: 1px solid #444 !important;
+}
+body.dark .ant-table-tbody > tr.ant-table-row:hover > td {
+  background: #3a3a3a !important;
+}
+body.dark .ant-pagination-item, body.dark .ant-pagination-prev .ant-pagination-item-link, body.dark .ant-pagination-next .ant-pagination-item-link {
+  background-color: #333 !important;
+  border-color: #555 !important;
+  color: #ccc !important;
+}
+body.dark .ant-pagination-item-active, body.dark .ant-pagination-item:hover {
+  background-color: #444 !important;
+  border-color: #66bfff !important;
+}
+body.dark .ant-pagination-item-active a, body.dark .ant-pagination-item:hover a {
+  color: #66bfff !important;
+}
+body.dark .ant-pagination-disabled .ant-pagination-item-link {
+  color: #666 !important;
+}
+
+body.dark .ant-card {
+  background-color: #2a2a2a !important; /* 卡片背景 */
+  border-color: #444 !important;
+  color: #e0e0e0 !important;
+}
+body.dark .ant-card-head {
+  border-bottom: 1px solid #444 !important;
+  color: #fff !important;
+}
+body.dark .ant-card-head-title {
+  color: #fff !important;
+}
+
+body.dark .ant-modal-content {
+  background-color: #2a2a2a !important;
+}
+body.dark .ant-modal-header {
+  background-color: #1f1f1f !important;
+  border-bottom: 1px solid #444 !important;
+}
+body.dark .ant-modal-title {
+  color: #fff !important;
+}
+body.dark .ant-modal-close-x {
+  color: #aaa !important;
+}
+body.dark .ant-modal-body {
+  color: #e0e0e0 !important;
+}
+body.dark .ant-modal-footer {
+  border-top: 1px solid #444 !important;
+}
+
+body.dark .ant-input, body.dark .ant-input-password {
+  background-color: #1f1f1f !important;
+  border-color: #555 !important;
+  color: #e0e0e0 !important;
+}
+body.dark .ant-input::placeholder {
+  color: #666 !important;
+}
+body.dark .ant-input-affix-wrapper {
+  background-color: #1f1f1f !important;
+  border-color: #555 !important;
+}
+body.dark .ant-input-affix-wrapper .ant-input-prefix {
+  color: #aaa !important;
+}
+
+body.dark .ant-form-item-label > label {
+  color: #ccc !important;
+}
+
+/* 注意: 之前在 UserCenter.css 中添加的 Select 和 Switch 样式可以保留，这里是更通用的覆盖 */ 

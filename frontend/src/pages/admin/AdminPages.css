@@ -1,0 +1,123 @@
+/* 管理页面通用样式 */
+.admin-page {
+    padding: 24px;
+    background-color: #fff;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px -2px rgba(0, 0, 0, 0.16), 
+                0 3px 6px 0 rgba(0, 0, 0, 0.12), 
+                0 5px 12px 4px rgba(0, 0, 0, 0.09);
+}
+
+.admin-page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 16px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.admin-page-header h1 {
+    margin: 0;
+    font-size: 22px;
+    color: #1f1f1f;
+}
+
+.admin-page-actions {
+    display: flex;
+    align-items: center;
+}
+
+/* 表单样式 */
+.admin-form-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.admin-form-actions {
+    margin-top: 24px;
+    text-align: right;
+}
+
+/* 表格样式定制 */
+.ant-table-wrapper .ant-table-thead > tr > th {
+    background-color: #f5f7fa;
+    color: #2c3e50;
+    font-weight: 500;
+}
+
+/* 标签样式 */
+.admin-tag-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+/* 详情视图样式 */
+.admin-detail-view {
+    padding: 16px;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.admin-detail-item {
+    margin-bottom: 12px;
+}
+
+.admin-detail-label {
+    font-weight: 500;
+    color: #5c6b77;
+    margin-right: 8px;
+}
+
+/* 统计卡片样式 */
+.admin-stat-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.admin-stat-card {
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 4px;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.07);
+    text-align: center;
+}
+
+.admin-stat-card .stat-title {
+    font-size: 14px;
+    color: #8c8c8c;
+    margin-bottom: 8px;
+}
+
+.admin-stat-card .stat-value {
+    font-size: 24px;
+    font-weight: bold;
+    color: #1890ff;
+}
+
+.admin-stat-card .stat-description {
+    font-size: 12px;
+    color: #bfbfbf;
+    margin-top: 4px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .admin-page-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .admin-page-actions {
+        margin-top: 16px;
+        width: 100%;
+    }
+    
+    .admin-stat-cards {
+        grid-template-columns: 1fr;
+    }
+} 

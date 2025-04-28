@@ -1,0 +1,159 @@
+.cultural-form-container {
+  padding: 15px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+}
+
+.form-title {
+  margin-bottom: 12px;
+  font-weight: 500;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.form-options {
+  display: flex;
+  justify-content: space-around;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.form-option {
+  flex: 1;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  padding: 12px;
+  cursor: pointer;
+  transition: all 0.3s;
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+  max-width: 45%;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+.form-option:hover {
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+}
+
+.form-option.active {
+  border-color: #1890ff;
+  background-color: rgba(24, 144, 255, 0.05);
+  box-shadow: 0 0 0 2px rgba(24, 144, 255, 0.2);
+}
+
+.form-option::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: linear-gradient(90deg, #1890ff, #096dd9);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+.form-option.active::before {
+  opacity: 1;
+}
+
+.option-icon {
+  font-size: 22px;
+  margin-bottom: 8px;
+  color: #1890ff;
+  transition: all 0.3s;
+  display: inline-block;
+}
+
+.option-title {
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 5px;
+  color: #333;
+  transition: all 0.3s;
+}
+
+.option-description {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 0;
+  transition: all 0.3s;
+  line-height: 1.4;
+}
+
+.form-option:hover .option-icon {
+  transform: scale(1.08);
+}
+
+.form-option.active .option-title {
+  color: #1890ff;
+}
+
+.form-description {
+  padding: 8px 12px;
+  color: #666;
+  font-size: 12px;
+  line-height: 1.5;
+  background-color: #e6f7ff;
+  border-radius: 4px;
+  border-left: 3px solid #1890ff;
+  opacity: 0;
+  height: 0;
+  overflow: hidden;
+  transition: all 0.3s;
+}
+
+.form-description:not(:empty) {
+  opacity: 1;
+  height: auto;
+  min-height: 20px;
+  margin-top: 5px;
+}
+
+/* 为物质文化和非物质文化添加特殊装饰 */
+.form-option[class*="active"]:nth-child(1)::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%231890ff" opacity="0.1"><path d="M12 2l2.2 6.6h6.8l-5.5 4.2 2.2 6.6-5.5-4.2-5.5 4.2 2.2-6.6-5.5-4.2h6.8z"/></svg>') no-repeat;
+  background-size: contain;
+  opacity: 0.2;
+  transform: rotate(15deg);
+  pointer-events: none;
+}
+
+.form-option[class*="active"]:nth-child(2)::before {
+  content: '';
+  position: absolute;
+  bottom: -20px;
+  right: -20px;
+  width: 80px;
+  height: 80px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="%231890ff" opacity="0.1"><path d="M12 2c-5.52 0-10 4.48-10 10s4.48 10 10 10 10-4.48 10-10-4.48-10-10-10zm-1 15h-2v-6h2v6zm4 0h-2v-6h2v6zm-2-8h-2v-2h2v2z"/></svg>') no-repeat;
+  background-size: contain;
+  opacity: 0.2;
+  transform: rotate(-15deg);
+  pointer-events: none;
+}
+
+/* 动画效果 */
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+} 

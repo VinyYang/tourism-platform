@@ -1,0 +1,20 @@
+{
+    "appName": "旅游平台",
+    "welcomeMessage": "欢迎来到我们的旅游平台！",
+    "userCenter": {
+        "title": "个人中心",
+        "profile": "个人资料",
+        "orders": "我的订单",
+        "favorites": "我的收藏",
+        "settings": "系统设置",
+        "logout": "退出登录",
+        "changePassword": "修改密码",
+        "saveChanges": "保存修改"
+    },
+    "settings": {
+        "theme": "主题",
+        "language": "语言",
+        "light": "亮色模式",
+        "dark": "暗色模式"
+    }
+} 

@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="1200" height="1600" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>
+      .entity-rect {
+        fill: #f9f9f9;
+        stroke: #333;
+        stroke-width: 2;
+      }
+      .relationship-diamond {
+        fill: #e0f0ff;
+        stroke: #333;
+        stroke-width: 2;
+      }
+      .attribute-ellipse {
+        fill: #f0ffe0;
+        stroke: #333;
+        stroke-width: 1.5;
+      }
+      .pk-attribute-ellipse {
+        fill: #ffe0e0;
+        stroke: #333;
+        stroke-width: 1.5;
+      }
+      .entity-name {
+        font-family: sans-serif;
+        font-size: 16px;
+        font-weight: bold;
+        text-anchor: middle;
+        fill: #333;
+      }
+      .relationship-name {
+        font-family: sans-serif;
+        font-size: 14px;
+        text-anchor: middle;
+        fill: #333;
+      }
+      .attribute-name {
+        font-family: sans-serif;
+        font-size: 12px;
+        text-anchor: middle;
+        fill: #333;
+      }
+      .pk-attribute-name {
+        font-family: sans-serif;
+        font-size: 12px;
+        font-weight: bold;
+        text-anchor: middle;
+        fill: #333;
+        text-decoration: underline;
+      }
+      .relationship-label {
+        font-family: sans-serif;
+        font-size: 14px;
+        fill: #333;
+      }
+      .connecting-line {
+        stroke: #666;
+        stroke-width: 1.5;
+        fill: none;
+      }
+    </style>
+  </defs>
+
+  <!-- 实体: 用户 -->
+  <g transform="translate(100, 300)">
+    <rect class="entity-rect" width="120" height="60" rx="5" ry="5"/>
+    <text class="entity-name" x="60" y="35">用户</text>
+
+    <!-- 用户属性 -->
+    <ellipse class="pk-attribute-ellipse" cx="0" cy="-60" rx="50" ry="25"/>
+    <text class="pk-attribute-name" x="0" y="-55">用户ID</text>
+
+    <ellipse class="attribute-ellipse" cx="-100" cy="0" rx="50" ry="25"/>
+    <text class="attribute-name" x="-100" y="5">用户名</text>
+
+    <ellipse class="attribute-ellipse" cx="-80" cy="70" rx="50" ry="25"/>
+    <text class="attribute-name" x="-80" y="75">密码</text>
+
+    <ellipse class="attribute-ellipse" cx="0" cy="100" rx="50" ry="25"/>
+    <text class="attribute-name" x="0" y="105">电子邮箱</text>
+
+    <ellipse class="attribute-ellipse" cx="100" cy="70" rx="50" ry="25"/>
+    <text class="attribute-name" x="100" y="75">角色</text>
+
+    <!-- 连接线 -->
+    <path class="connecting-line" d="M60,0 L0,-35"/>
+    <path class="connecting-line" d="M0,30 L-50,0"/>
+    <path class="connecting-line" d="M0,30 L-40,50"/>
+    <path class="connecting-line" d="M60,60 L0,75"/>
+    <path class="connecting-line" d="M120,30 L100,45"/>
+  </g>
+
+  <!-- 实体: 景点 -->
+  <g transform="translate(600, 300)">
+    <rect class="entity-rect" width="120" height="60" rx="5" ry="5"/>
+    <text class="entity-name" x="60" y="35">景点</text>
+
+    <!-- 景点属性 -->
+    <ellipse class="pk-attribute-ellipse" cx="0" cy="-60" rx="50" ry="25"/>
+    <text class="pk-attribute-name" x="0" y="-55">景点ID</text>
+
+    <ellipse class="attribute-ellipse" cx="-100" cy="0" rx="50" ry="25"/>
+    <text class="attribute-name" x="-100" y="5">名称</text>
+
+    <ellipse class="attribute-ellipse" cx="-80" cy="70" rx="50" ry="25"/>
+    <text class="attribute-name" x="-80" y="75">城市</text>
+
+    <ellipse class="attribute-ellipse" cx="0" cy="100" rx="50" ry="25"/>
+    <text class="attribute-name" x="0" y="105">票价</text>
+
+    <ellipse class="attribute-ellipse" cx="100" cy="70" rx="50" ry="25"/>
+    <text class="attribute-name" x="100" y="75">热度分数</text>
+
+    <!-- 连接线 -->
+    <path class="connecting-line" d="M60,0 L0,-35"/>
+    <path class="connecting-line" d="M0,30 L-50,0"/>
+    <path class="connecting-line" d="M0,30 L-40,50"/>
+    <path class="connecting-line" d="M60,60 L0,75"/>
+    <path class="connecting-line" d="M120,30 L100,45"/>
+  </g>
+
+  <!-- 实体: 酒店 -->
+  <g transform="translate(600, 700)">
+    <rect class="entity-rect" width="120" height="60" rx="5" ry="5"/>
+    <text class="entity-name" x="60" y="35">酒店</text>
+
+    <!-- 酒店属性 -->
+    <ellipse class="pk-attribute-ellipse" cx="0" cy="-60" rx="50" ry="25"/>
+    <text class="pk-attribute-name" x="0" y="-55">酒店ID</text>
+
+    <ellipse class="attribute-ellipse" cx="-100" cy="0" rx="50" ry="25"/>
+    <text class="attribute-name" x="-100" y="5">名称</text>
+
+    <ellipse class="attribute-ellipse" cx="-80" cy="70" rx="50" ry="25"/>
+    <text class="attribute-name" x="-80" y="75">城市</text>
+
+    <ellipse class="attribute-ellipse" cx="0" cy="100" rx="50" ry="25"/>
+    <text class="attribute-name" x="0" y="105">星级</text>
+
+    <ellipse class="attribute-ellipse" cx="100" cy="70" rx="50" ry="25"/>
+    <text class="attribute-name" x="100" y="75">价格区间</text>
+
+    <!-- 连接线 -->
+    <path class="connecting-line" d="M60,0 L0,-35"/>
+    <path class="connecting-line" d="M0,30 L-50,0"/>
+    <path class="connecting-line" d="M0,30 L-40,50"/>
+    <path class="connecting-line" d="M60,60 L0,75"/>
+    <path class="connecting-line" d="M120,30 L100,45"/>
+  </g>
+
+  <!-- 实体: 攻略 -->
+  <g transform="translate(100, 700)">
+    <rect class="entity-rect" width="120" height="60" rx="5" ry="5"/>
+    <text class="entity-name" x="60" y="35">攻略</text>
+
+    <!-- 攻略属性 -->
+    <ellipse class="pk-attribute-ellipse" cx="0" cy="-60" rx="50" ry="25"/>
+    <text class="pk-attribute-name" x="0" y="-55">攻略ID</text>
+
+    <ellipse class="attribute-ellipse" cx="-100" cy="0" rx="50" ry="25"/>
+    <text class="attribute-name" x="-100" y="5">标题</text>
+
+    <ellipse class="attribute-ellipse" cx="-80" cy="70" rx="50" ry="25"/>
+    <text class="attribute-name" x="-80" y="75">内容</text>
+
+    <ellipse class="attribute-ellipse" cx="0" cy="100" rx="50" ry="25"/>
+    <text class="attribute-name" x="0" y="105">城市</text>
+
+    <ellipse class="attribute-ellipse" cx="100" cy="70" rx="50" ry="25"/>
+    <text class="attribute-name" x="100" y="75">类型</text>
+
+    <!-- 连接线 -->
+    <path class="connecting-line" d="M60,0 L0,-35"/>
+    <path class="connecting-line" d="M0,30 L-50,0"/>
+    <path class="connecting-line" d="M0,30 L-40,50"/>
+    <path class="connecting-line" d="M60,60 L0,75"/>
+    <path class="connecting-line" d="M120,30 L100,45"/>
+  </g>
+
+  <!-- 实体: 自定义行程 -->
+  <g transform="translate(350, 1000)">
+    <rect class="entity-rect" width="120" height="60" rx="5" ry="5"/>
+    <text class="entity-name" x="60" y="35">自定义行程</text>
+
+    <!-- 自定义行程属性 -->
+    <ellipse class="pk-attribute-ellipse" cx="0" cy="-60" rx="50" ry="25"/>
+    <text class="pk-attribute-name" x="0" y="-55">行程ID</text>
+
+    <ellipse class="attribute-ellipse" cx="-100" cy="0" rx="50" ry="25"/>
+    <text class="attribute-name" x="-100" y="5">标题</text>
+
+    <ellipse class="attribute-ellipse" cx="-80" cy="70" rx="50" ry="25"/>
+    <text class="attribute-name" x="-80" y="75">开始日期</text>
+
+    <ellipse class="attribute-ellipse" cx="100" cy="70" rx="50" ry="25"/>
+    <text class="attribute-name" x="100" y="75">结束日期</text>
+
+    <!-- 连接线 -->
+    <path class="connecting-line" d="M60,0 L0,-35"/>
+    <path class="connecting-line" d="M0,30 L-50,0"/>
+    <path class="connecting-line" d="M0,30 L-40,50"/>
+    <path class="connecting-line" d="M120,30 L100,45"/>
+  </g>
+
+  <!-- 实体: 行程项 -->
+  <g transform="translate(600, 1000)">
+    <rect class="entity-rect" width="120" height="60" rx="5" ry="5"/>
+    <text class="entity-name" x="60" y="35">行程项</text>
+
+    <!-- 行程项属性 -->
+    <ellipse class="pk-attribute-ellipse" cx="0" cy="-60" rx="50" ry="25"/>
+    <text class="pk-attribute-name" x="0" y="-55">项目ID</text>
+
+    <ellipse class="attribute-ellipse" cx="-100" cy="0" rx="50" ry="25"/>
+    <text class="attribute-name" x="-100" y="5">日期序号</text>
+
+    <ellipse class="attribute-ellipse" cx="100" cy="0" rx="50" ry="25"/>
+    <text class="attribute-name" x="100" y="5">项目类型</text>
+
+    <ellipse class="attribute-ellipse" cx="0" cy="100" rx="50" ry="25"/>
+    <text class="attribute-name" x="0" y="105">备注</text>
+
+    <!-- 连接线 -->
+    <path class="connecting-line" d="M60,0 L0,-35"/>
+    <path class="connecting-line" d="M0,30 L-50,0"/>
+    <path class="connecting-line" d="M120,30 L100,0"/>
+    <path class="connecting-line" d="M60,60 L0,75"/>
+  </g>
+
+  <!-- 关系: 用户-攻略 -->
+  <g transform="translate(100, 500)">
+    <polygon class="relationship-diamond" points="0,-40 60,0 0,40 -60,0"/>
+    <text class="relationship-name" x="0" y="5">创建</text>
+
+    <!-- 连接线和关系标记 -->
+    <path class="connecting-line" d="M0,-40 L0,-140"/>
+    <text class="relationship-label" x="10" y="-100">1</text>
+
+    <path class="connecting-line" d="M0,40 L0,140"/>
+    <text class="relationship-label" x="10" y="100">N</text>
+  </g>
+
+  <!-- 关系: 用户-预订 -->
+  <g transform="translate(350, 200)">
+    <polygon class="relationship-diamond" points="0,-40 60,0 0,40 -60,0"/>
+    <text class="relationship-name" x="0" y="5">预订</text>
+  </g>
+
+  <!-- 连接线: 用户-预订 -->
+  <path class="connecting-line" d="M220,300 L290,200"/>
+  <text class="relationship-label" x="240" y="240">1</text>
+
+  <!-- 连接线: 预订-景点 -->
+  <path class="connecting-line" d="M410,200 L500,240 L500,300"/>
+  <text class="relationship-label" x="470" y="220">N</text>
+
+  <!-- 关系: 用户-自定义行程 -->
+  <g transform="translate(100, 1000)">
+    <polygon class="relationship-diamond" points="0,-40 60,0 0,40 -60,0"/>
+    <text class="relationship-name" x="0" y="5">规划</text>
+  </g>
+
+  <!-- 连接线: 用户-规划 -->
+  <path class="connecting-line" d="M100,360 L20,500 L20,960"/>
+  <text class="relationship-label" x="30" y="700">1</text>
+
+  <!-- 连接线: 规划-自定义行程 -->
+  <path class="connecting-line" d="M160,1000 L250,1000"/>
+  <text class="relationship-label" x="200" y="990">N</text>
+
+  <!-- 关系: 自定义行程-行程项 -->
+  <g transform="translate(470, 1000)">
+    <polygon class="relationship-diamond" points="0,-40 40,0 0,40 -40,0"/>
+    <text class="relationship-name" x="0" y="5">包含</text>
+  </g>
+
+  <!-- 连接线: 自定义行程-包含 -->
+  <path class="connecting-line" d="M470,1000 L430,1000"/>
+  <text class="relationship-label" x="450" y="990">1</text>
+
+  <!-- 连接线: 包含-行程项 -->
+  <path class="connecting-line" d="M510,1000 L560,1000"/>
+  <text class="relationship-label" x="535" y="990">N</text>
+
+  <!-- 关系: 景点-行程项 -->
+  <g transform="translate(660, 850)">
+    <polygon class="relationship-diamond" points="0,-40 60,0 0,40 -60,0"/>
+    <text class="relationship-name" x="0" y="5">加入</text>
+  </g>
+
+  <!-- 连接线: 景点-加入 -->
+  <path class="connecting-line" d="M660,360 L660,810"/>
+  <text class="relationship-label" x="670" y="600">1</text>
+
+  <!-- 连接线: 加入-行程项 -->
+  <path class="connecting-line" d="M660,890 L660,940"/>
+  <text class="relationship-label" x="670" y="920">N</text>
+
+  <!-- 关系: 酒店-行程项 -->
+  <g transform="translate(800, 850)">
+    <polygon class="relationship-diamond" points="0,-40 60,0 0,40 -60,0"/>
+    <text class="relationship-name" x="0" y="5">安排</text>
+  </g>
+
+  <!-- 连接线: 酒店-安排 -->
+  <path class="connecting-line" d="M720,730 L800,810"/>
+  <text class="relationship-label" x="750" y="770">1</text>
+
+  <!-- 连接线: 安排-行程项 -->
+  <path class="connecting-line" d="M800,890 L720,970"/>
+  <text class="relationship-label" x="750" y="940">N</text>
+
+  <!-- 关系: 预订-酒店 -->
+  <path class="connecting-line" d="M410,240 L600,600 L600,640"/>
+  <text class="relationship-label" x="520" y="500">N</text>
+</svg> 

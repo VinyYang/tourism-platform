@@ -1,0 +1,69 @@
+.featured-route-management {
+  padding: 20px;
+}
+
+.featured-route-management .ant-card {
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.featured-route-management .ant-tag {
+  margin-top: 4px;
+}
+
+.featured-route-management .ant-table-cell {
+  vertical-align: middle;
+}
+
+/* 地图容器样式 */
+.route-map-container {
+  height: 500px;
+  width: 100%;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-top: 8px;
+}
+
+/* 表单样式微调 */
+.featured-route-management .ant-form-item-with-help {
+  margin-bottom: 16px;
+}
+
+.featured-route-management .ant-card-body {
+  padding: 20px;
+}
+
+.spots-selection-container {
+  margin-top: 16px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  padding: 16px;
+}
+
+.spots-search-section {
+  margin-bottom: 16px;
+}
+
+.selected-spots-list {
+  max-height: 300px;
+  overflow: auto;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+  padding: 8px;
+}
+
+.selected-spots-list .ant-list-item {
+  padding: 8px 16px;
+}
+
+.selected-spots-list .ant-empty {
+  margin: 32px 0;
+}
+
+.ant-avatar {
+  background-color: #1890ff;
+}
+
+/* 当处于编辑模式时不显示查看模式的景点列表 */
+.spots-selection-container + div[style*="borderTop"] {
+  display: none;
+} 

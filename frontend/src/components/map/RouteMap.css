@@ -1,0 +1,94 @@
+.route-map-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  min-height: 500px;
+  position: relative;
+}
+
+.amap-container {
+  width: 100%;
+  height: 500px;
+  position: relative;
+  z-index: 1;
+}
+
+.route-info {
+  padding: 10px 0;
+  margin-bottom: 10px;
+}
+
+.map-loading {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 20px;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.route-panel {
+  margin-top: 20px;
+  max-height: 300px;
+  overflow: auto;
+  padding: 10px;
+  border: 1px solid #f0f0f0;
+  border-radius: 4px;
+}
+
+.amap-marker-label {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 5px 10px;
+  border-radius: 3px;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.map-info-window {
+  max-width: 300px;
+}
+
+.map-info-window h3, .map-info-window h4 {
+  margin-bottom: 8px;
+  color: #1890ff;
+}
+
+.map-info-window img {
+  max-width: 100%;
+  margin-top: 10px;
+  border-radius: 4px;
+}
+
+.map-info-coordinates {
+  color: #999;
+  margin-top: 8px;
+  font-size: 12px;
+}
+
+.custom-marker {
+  cursor: pointer;
+  transition: all 0.3s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.custom-marker:hover {
+  transform: scale(1.1);
+}
+
+.amap-info-content {
+  max-width: 320px !important;
+  min-width: 260px;
+}
+
+.amap-driving-route {
+  stroke-width: 6px !important;
+} 

@@ -1,0 +1,182 @@
+.train-ticket-search {
+  margin-bottom: 30px;
+}
+
+.search-card {
+  margin-bottom: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+}
+
+.results-card {
+  margin-top: 20px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.09);
+}
+
+.loading-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 300px;
+}
+
+.error-message {
+  margin-top: 15px;
+  padding: 10px;
+  background-color: #fff2f0;
+  border: 1px solid #ffccc7;
+  border-radius: 4px;
+  color: #f5222d;
+}
+
+.seat-price {
+  font-size: 12px;
+  color: #fa8c16;
+  margin-top: 4px;
+}
+
+.train-details {
+  padding: 10px;
+  background-color: #f9f9f9;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+  .ant-form-inline .ant-form-item {
+    margin-bottom: 16px;
+  }
+  
+  .ant-table-scroll {
+    overflow-x: auto;
+  }
+}
+
+/* 增强表格可读性 */
+.ant-table-row:hover {
+  background-color: #f0f7ff !important;
+}
+
+/* 美化展开行 */
+.ant-table-expanded-row .train-details {
+  margin: 10px;
+  border-radius: 4px;
+}
+
+/* 站点选项样式 */
+.station-option {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.station-name {
+  font-weight: bold;
+}
+
+.station-code {
+  color: #999;
+  font-size: 12px;
+}
+
+/* 表单布局样式 */
+.train-search-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+
+.station-form-item {
+  flex: 1;
+  min-width: 200px;
+}
+
+.date-form-item {
+  flex: 1;
+  min-width: 150px;
+}
+
+.train-code-form-item {
+  flex: 0 0 150px;
+}
+
+.search-button-item {
+  align-self: flex-end;
+  margin-bottom: 22px !important;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .train-search-form {
+    flex-direction: column;
+  }
+  
+  .station-form-item,
+  .date-form-item,
+  .train-code-form-item,
+  .search-button-item {
+    width: 100%;
+    margin-bottom: 16px !important;
+  }
+  
+  .search-button-item {
+    align-self: auto;
+  }
+}
+
+/* 已有样式保留 */
+.seat-price {
+  color: #ff4d4f;
+  font-size: 12px;
+  margin-top: 2px;
+}
+
+.train-detail-panel .ant-descriptions-item-label {
+  font-weight: bold;
+}
+
+.train-info-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.train-info-time {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.train-info-duration {
+  text-align: center;
+  color: #666;
+}
+
+.train-info-stations {
+  display: flex;
+  flex-direction: column;
+}
+
+.train-info-station {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.train-info-station-details {
+  color: #888;
+  font-size: 12px;
+}
+
+.train-ticket-search .ant-table-wrapper {
+  margin-top: 16px;
+}
+
+/* API选择器样式 */
+.api-selector {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.api-selector .ant-switch {
+  margin-right: 8px;
+} 

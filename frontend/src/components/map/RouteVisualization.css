@@ -1,0 +1,41 @@
+.route-visualization {
+  margin-bottom: 20px;
+}
+
+.route-header {
+  margin-bottom: 16px;
+}
+
+.route-summary {
+  margin-top: 8px;
+  color: #666;
+}
+
+.best-options {
+  margin-bottom: 16px;
+}
+
+.option-detail {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #666;
+}
+
+.routes-tabs {
+  margin-top: 16px;
+}
+
+.empty-routes {
+  text-align: center;
+  padding: 20px;
+  color: #999;
+}
+
+/* 表格样式 */
+.ant-table-row {
+  cursor: pointer;
+}
+
+.ant-table-row:hover {
+  background-color: #f5f5f5;
+} 

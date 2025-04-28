@@ -1,0 +1,20 @@
+{
+    "appName": "旅游平台",
+    "welcomeMessage": "Welcome to our travel platform!",
+    "userCenter": {
+        "title": "User Center",
+        "profile": "Profile",
+        "orders": "My Orders",
+        "favorites": "My Favorites",
+        "settings": "Settings",
+        "logout": "Logout",
+        "changePassword": "Change Password",
+        "saveChanges": "Save Changes"
+    },
+    "settings": {
+        "theme": "Theme",
+        "language": "Language",
+        "light": "Light",
+        "dark": "Dark"
+    }
+} 

@@ -1,0 +1,159 @@
+.order-detail-container {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 0 15px;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.order-detail-card {
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.order-detail-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.order-detail-header {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.back-button {
+    margin-right: 15px;
+}
+
+.order-detail-header h4 {
+    margin: 0;
+    flex-grow: 1;
+    color: #333;
+}
+
+.order-detail-status {
+    margin-bottom: 20px;
+    text-align: right;
+}
+
+.status-tag {
+    font-size: 14px;
+    padding: 4px 12px;
+    border-radius: 4px;
+}
+
+.order-basic-info {
+    margin-bottom: 24px;
+}
+
+.order-price {
+    color: #f5222d;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.hotel-detail, .scenic-detail {
+    margin-bottom: 24px;
+}
+
+.order-remarks {
+    background-color: #fafafa;
+    padding: 16px;
+    border-radius: 4px;
+    margin-bottom: 24px;
+}
+
+.order-actions {
+    margin-top: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.order-detail-loading {
+    display: flex;
+    justify-content: center;
+    padding: 100px 0;
+    width: 100%;
+}
+
+.loading-card {
+    text-align: center;
+    padding: 40px;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.loading-text {
+    margin-top: 16px;
+    color: #999;
+}
+
+.order-detail-error {
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+@media (max-width: 768px) {
+    .order-detail-container {
+        margin: 10px auto;
+        padding: 0 10px;
+    }
+    
+    .order-detail-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .back-button {
+        margin-bottom: 10px;
+    }
+    
+    .order-detail-status {
+        text-align: left;
+        margin-top: 10px;
+    }
+}
+
+.ant-descriptions-item-label,
+.ant-descriptions-item-content {
+    word-break: break-word;
+}
+
+.ant-descriptions-item-label {
+    font-weight: 500;
+}
+
+.ant-card, .ant-btn, .ant-tag, .ant-descriptions {
+    transition: all 0.3s ease;
+}
+
+.order-timeline {
+    margin: 20px 0;
+    padding: 0 10px;
+}
+
+@media (prefers-color-scheme: dark) {
+    .order-detail-card,
+    .loading-card {
+        background-color: #1f1f1f;
+        border-color: #303030;
+    }
+    
+    .order-remarks {
+        background-color: #141414;
+    }
+    
+    .ant-descriptions-item-label,
+    .ant-descriptions-item-content {
+        color: #d9d9d9;
+    }
+} 

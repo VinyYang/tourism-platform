@@ -1,0 +1,242 @@
+.time-axis-container {
+  padding: 20px;
+  margin: 20px 0;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  border: 1px solid rgba(24, 144, 255, 0.1);
+}
+
+.axis-title {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: #333;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 18px;
+}
+
+.axis-title .anticon {
+  color: #1890ff;
+}
+
+.timeline-container {
+  position: relative;
+  width: 100%;
+  overflow-x: auto;
+  margin-bottom: 25px;
+  padding: 20px 0;
+}
+
+.timeline {
+  position: relative;
+  height: 180px;
+  background: linear-gradient(to bottom, transparent 45%, #e0e9f7 50%, transparent 55%);
+  min-width: 100%;
+  width: max-content;
+  padding: 0 40px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.timeline-node {
+  position: relative;
+  width: 200px;
+  margin: 0 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+}
+
+.timeline-node::before {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  background-color: #1890ff;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  transition: all 0.3s ease;
+  z-index: 10;
+  box-shadow: 0 0 0 4px rgba(24, 144, 255, 0.1);
+}
+
+.timeline-node:hover::before {
+  width: 24px;
+  height: 24px;
+  background-color: #40a9ff;
+  box-shadow: 0 0 0 6px rgba(24, 144, 255, 0.2);
+}
+
+.timeline-node.active::before {
+  width: 24px;
+  height: 24px;
+  background-color: #096dd9;
+  box-shadow: 0 0 0 6px rgba(24, 144, 255, 0.3);
+}
+
+.node-connector {
+  position: absolute;
+  left: 50%;
+  width: 2px;
+  background-color: #1890ff;
+  transform: translateX(-50%);
+}
+
+.node-connector.top {
+  top: 0;
+  height: calc(50% - 15px);
+}
+
+.node-connector.bottom {
+  bottom: 0;
+  top: calc(50% + 15px);
+  height: calc(50% - 15px);
+}
+
+.node-label {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  white-space: nowrap;
+  font-size: 15px;
+  color: #333;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 4px;
+  z-index: 5;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: max-content;
+  max-width: 180px;
+  text-align: center;
+}
+
+.timeline-node:hover .node-label,
+.timeline-node.active .node-label {
+  color: #1890ff;
+  font-weight: 700;
+  background-color: #f0f7ff;
+}
+
+.node-content {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 14px;
+  color: #444;
+  max-width: 180px;
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 4px 8px;
+  border-radius: 4px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  z-index: 5;
+}
+
+.timeline-node:hover .node-content,
+.timeline-node.active .node-content {
+  background-color: #f0f7ff;
+}
+
+.selected-event-detail {
+  background-color: #f0f7ff;
+  padding: 20px;
+  border-radius: 10px;
+  border-left: 4px solid #1890ff;
+  margin-top: 25px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.selected-event-detail h4 {
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: #1890ff;
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.selected-event-detail p {
+  margin-bottom: 0;
+  color: #333;
+  line-height: 1.8;
+}
+
+/* 自定义滚动条样式 */
+.timeline-container::-webkit-scrollbar {
+  height: 6px;
+}
+
+.timeline-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.timeline-container::-webkit-scrollbar-thumb {
+  background: #1890ff;
+  border-radius: 3px;
+}
+
+.timeline-container::-webkit-scrollbar-thumb:hover {
+  background: #0c70d8;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .timeline {
+    height: 150px;
+  }
+  
+  .node-connector.top {
+    height: calc(50% - 10px);
+  }
+  
+  .node-connector.bottom {
+    top: calc(50% + 10px);
+    height: calc(50% - 10px);
+  }
+  
+  .node-label {
+    font-size: 14px;
+    max-width: 150px;
+  }
+  
+  .node-content {
+    max-width: 150px;
+    font-size: 13px;
+  }
+  
+  .timeline-node {
+    width: 160px;
+  }
+}
+
+@media (max-width: 480px) {
+  .timeline {
+    height: 140px;
+  }
+  
+  .timeline-node {
+    width: 130px;
+  }
+  
+  .node-label {
+    font-size: 13px;
+    max-width: 120px;
+  }
+  
+  .node-content {
+    max-width: 120px;
+    font-size: 12px;
+  }
+} 

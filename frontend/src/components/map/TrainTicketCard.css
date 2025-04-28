@@ -1,0 +1,72 @@
+.train-ticket-card .train-info {
+  display: flex;
+  flex-direction: column;
+  padding: 10px 0;
+}
+
+.train-ticket-card .time-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.train-ticket-card .departure,
+.train-ticket-card .arrival {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100px;
+}
+
+.train-ticket-card .duration {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 10px;
+}
+
+.train-ticket-card .time {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+}
+
+.train-ticket-card .station {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.train-ticket-card .duration .time {
+  font-size: 14px;
+  color: #1890ff;
+}
+
+.train-ticket-card .duration .line {
+  width: 100%;
+  height: 2px;
+  background-color: #f0f0f0;
+  position: relative;
+  margin: 10px 0;
+}
+
+.train-ticket-card .train-code {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.train-ticket-card .train-footer {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px dashed #eee;
+  color: #999;
+  font-size: 12px;
+}
+
+.train-ticket-card .empty-tickets {
+  padding: 30px;
+  text-align: center;
+  color: #999;
+} 

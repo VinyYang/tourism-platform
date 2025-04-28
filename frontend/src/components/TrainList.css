@@ -1,0 +1,77 @@
+.train-list-container {
+  margin: 20px 0;
+}
+
+.search-card {
+  margin-bottom: 20px;
+}
+
+.filter-card {
+  margin-bottom: 20px;
+}
+
+.filter-item {
+  display: flex;
+  align-items: center;
+}
+
+.filter-label {
+  flex: 0 0 30%;
+  font-weight: 500;
+}
+
+.train-table .ant-table-thead > tr > th {
+  background-color: #f5f5f5;
+  font-weight: 500;
+}
+
+.train-number {
+  font-size: 16px;
+  font-weight: 500;
+  color: #1890ff;
+}
+
+.train-type {
+  font-size: 12px;
+  color: #666;
+}
+
+.station-time {
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.station-name {
+  font-size: 13px;
+  color: #666;
+}
+
+.duration {
+  color: #666;
+}
+
+.seat-info {
+  max-width: 200px;
+}
+
+.seat-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 6px;
+  font-size: 13px;
+}
+
+.seat-name {
+  flex: 0 0 40%;
+  color: #666;
+}
+
+.seat-price {
+  flex: 0 0 30%;
+  font-weight: 500;
+}
+
+.seat-left {
+  flex: 0 0 30%;
+  text-align: right;
+} 

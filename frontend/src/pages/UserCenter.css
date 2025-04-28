@@ -1,0 +1,836 @@
+/* 用户中心页面样式 */
+.user-center-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* 页面标题部分 */
+.user-center-header {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.user-center-header h1 {
+    font-size: 2.5rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+/* 加载提示 */
+.loading {
+    text-align: center;
+    padding: 40px;
+    font-size: 1.2rem;
+    color: #666;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+/* 错误提示 */
+.error-message {
+    text-align: center;
+    padding: 40px;
+    color: #e74c3c;
+    background-color: #fef0f0;
+    border-radius: 8px;
+    margin: 20px auto;
+    max-width: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+}
+
+.error-message button {
+    padding: 8px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.error-message button:hover {
+    background-color: #2980b9;
+}
+
+/* 主体内容部分 */
+.user-center-content {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+/* 标签页导航 */
+.tabs-navigation {
+    display: flex;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.tab-button {
+    padding: 15px 20px;
+    border: none;
+    background: none;
+    font-size: 1rem;
+    color: #666;
+    cursor: pointer;
+    transition: all 0.3s;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.tab-button:hover {
+    background-color: #f0f0f0;
+}
+
+.tab-button.active {
+    color: #3498db;
+    border-bottom: 3px solid #3498db;
+    font-weight: bold;
+}
+
+/* 标签页内容 */
+.tab-content {
+    padding: 20px;
+}
+
+/* 用户资料标签页 */
+.profile-section {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+.user-header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid #eee;
+}
+
+.user-avatar {
+    flex: 0 0 100px;
+    height: 100px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: relative;
+    align-self: center;
+}
+
+/* 头像预览和URL输入区域样式 */
+.avatar-input-preview {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+.avatar-section-title {
+    margin-top: 0;
+    margin-bottom: 15px;
+    font-size: 16px;
+    color: #333;
+    text-align: center;
+    border-bottom: 1px solid #eee;
+    padding-bottom: 10px;
+}
+
+.avatar-preview-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.avatar-preview-image {
+    display: block;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.avatar-url-input {
+    margin-top: 5px;
+}
+
+.avatar-url-input label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: 500;
+    color: #555;
+}
+
+.avatar-tip {
+    font-size: 12px;
+    color: #777;
+    line-height: 1.4;
+    background-color: #fff9e6;
+    padding: 8px;
+    border-radius: 4px;
+    border-left: 3px solid #ffcc00;
+}
+
+/* 原有的头像样式保持不变 */
+.user-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.user-info {
+    flex: 1;
+}
+
+.username {
+    font-size: 1.5rem;
+    margin: 0 0 5px 0;
+    color: #333;
+}
+
+.user-level {
+    display: inline-block;
+    background-color: #ffcc00;
+    color: #333;
+    padding: 2px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    margin-bottom: 8px;
+}
+
+.user-points, .join-date {
+    color: #666;
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+}
+
+.profile-details, .security-section {
+    background-color: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.profile-details h3, .security-section h3 {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.profile-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.form-group input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.95rem;
+}
+
+.form-group input:disabled {
+    background-color: #f0f0f0;
+    cursor: not-allowed;
+}
+
+.form-action {
+    margin-top: 10px;
+}
+
+.save-profile {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.save-profile:hover {
+    background-color: #2980b9;
+}
+
+.save-profile:disabled {
+    background-color: #95c8eb;
+    cursor: not-allowed;
+}
+
+.security-options {
+    display: flex;
+    gap: 15px;
+}
+
+.change-password, .logout {
+    padding: 10px 15px;
+    border-radius: 4px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.change-password {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.change-password:hover {
+    background-color: #e0e0e0;
+}
+
+.logout {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.logout:hover {
+    background-color: #c0392b;
+}
+
+/* 密码修改模态框 */
+.password-form {
+    padding: 10px 0;
+}
+
+/* 订单标签页 */
+.orders-section {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.orders-filter {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.filter-button {
+    padding: 8px 15px;
+    background-color: #f0f0f0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.filter-button:hover {
+    background-color: #e0e0e0;
+}
+
+.filter-button.active {
+    background-color: #3498db;
+    color: white;
+    border-color: #3498db;
+}
+
+.no-orders, .no-favorites {
+    text-align: center;
+    padding: 30px;
+    color: #666;
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+.orders-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.order-card {
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    overflow: hidden;
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.order-card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.order-card.completed {
+    border-left: 3px solid #27ae60;
+}
+
+.order-card.upcoming {
+    border-left: 3px solid #3498db;
+}
+
+.order-card.cancelled {
+    border-left: 3px solid #e74c3c;
+}
+
+.order-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 15px;
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #ddd;
+}
+
+.order-id {
+    font-size: 0.9rem;
+    color: #666;
+}
+
+.order-status {
+    font-size: 0.9rem;
+    font-weight: bold;
+}
+
+.order-card.completed .order-status {
+    color: #27ae60;
+}
+
+.order-card.upcoming .order-status {
+    color: #3498db;
+}
+
+.order-card.cancelled .order-status {
+    color: #e74c3c;
+}
+
+.order-content {
+    padding: 15px;
+}
+
+.order-title {
+    font-size: 1.2rem;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.order-detail, .order-date {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 5px;
+}
+
+.order-price {
+    font-weight: bold;
+    font-size: 1.1rem;
+    color: #e74c3c;
+    margin-top: 10px;
+}
+
+.order-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    padding: 10px 15px;
+    border-top: 1px solid #ddd;
+}
+
+.view-order, .cancel-order, .add-review {
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-size: 0.9rem;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.view-order {
+    background-color: #f0f0f0;
+    color: #333;
+    border: 1px solid #ddd;
+}
+
+.view-order:hover {
+    background-color: #e0e0e0;
+}
+
+.cancel-order {
+    background-color: #e74c3c;
+    color: white;
+    border: 1px solid #e74c3c;
+}
+
+.cancel-order:hover {
+    background-color: #c0392b;
+}
+
+.cancel-order:disabled {
+    background-color: #f0b2ac;
+    cursor: not-allowed;
+}
+
+.add-review {
+    background-color: #f39c12;
+    color: white;
+    border: 1px solid #f39c12;
+}
+
+.add-review:hover {
+    background-color: #d68910;
+}
+
+/* 收藏标签页 */
+.favorites-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.favorite-card {
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.favorite-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+}
+
+.favorite-image {
+    position: relative;
+    height: 180px;
+}
+
+.favorite-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.favorite-type {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 4px 10px;
+    border-radius: 4px;
+    font-size: 0.8rem;
+}
+
+.remove-favorite {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #333;
+    border: none;
+    font-size: 1.2rem;
+    line-height: 0;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s;
+}
+
+.remove-favorite:hover {
+    background-color: #e74c3c;
+    color: white;
+}
+
+.remove-favorite:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.favorite-info {
+    padding: 15px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+.favorite-title {
+    font-size: 1.1rem;
+    color: #333;
+    margin: 0 0 10px 0;
+}
+
+.favorite-description {
+    color: #666;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    margin-bottom: 15px;
+    flex-grow: 1;
+}
+
+.view-favorite {
+    align-self: flex-start;
+    background-color: #3498db;
+    color: white;
+    padding: 8px 15px;
+    border-radius: 4px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.view-favorite:hover {
+    background-color: #2980b9;
+}
+
+/* 分页容器 */
+.pagination-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/* 响应式布局 */
+@media (max-width: 768px) {
+    .user-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    
+    .avatar-input-preview {
+        width: 100%;
+        max-width: 300px;
+        margin-bottom: 20px;
+    }
+    
+    .security-options {
+        flex-direction: column;
+    }
+    
+    .orders-filter {
+        flex-wrap: wrap;
+    }
+    
+    .filter-button {
+        flex: 1 0 30%;
+    }
+    
+    .favorites-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .tabs-navigation {
+        flex-wrap: wrap;
+    }
+    
+    .tab-button {
+        flex: 1 0 40%;
+    }
+    
+    .tab-button.active {
+        flex: 1 0 40%;
+    }
+    
+    .avatar-input-preview {
+        padding: 10px;
+    }
+    
+    .avatar-preview-container img {
+        width: 120px !important;
+        height: 120px !important;
+    }
+    
+    .order-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .order-actions {
+        flex-direction: column;
+        width: 100%;
+    }
+}
+
+/* 暗色模式适配 */
+body.dark .user-center-container {
+    /* 容器本身不需要特定颜色，依赖 body */
+}
+
+body.dark .user-center-header h1 {
+    color: #e0e0e0; /* 标题使用浅色 */
+}
+
+body.dark .user-center-content {
+    background-color: #2a2a2a; /* 深灰色背景 */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5); /* 加深阴影 */
+    border: 1px solid #444; /* 添加边框以便区分 */
+}
+
+body.dark .tabs-navigation {
+    background-color: #222; /* 更深的导航背景 */
+    border-bottom: 1px solid #444;
+}
+
+body.dark .tab-button {
+    color: #aaa; /* 未激活按钮文字颜色 */
+    background: none;
+}
+
+body.dark .tab-button:hover {
+    background-color: #333; /* 悬停背景 */
+    color: #fff;
+}
+
+body.dark .tab-button.active {
+    color: #66bfff; /* 激活按钮文字颜色 */
+    border-bottom-color: #66bfff; /* 激活下划线颜色 */
+    background-color: #2a2a2a; /* 与内容区域背景一致 */
+}
+
+body.dark .tab-content {
+    background-color: #2d3748;
+    color: #e2e8f0;
+}
+
+/* 头像预览和URL输入区域的深色模式样式 */
+body.dark .avatar-input-preview {
+    background-color: #2d3748;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+body.dark .avatar-section-title {
+    color: #e2e8f0;
+    border-bottom-color: #4a5568;
+}
+
+body.dark .avatar-preview-image {
+    border-color: #4a5568 !important;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .avatar-url-input label {
+    color: #cbd5e0;
+}
+
+body.dark .avatar-tip {
+    background-color: #3a4556;
+    color: #cbd5e0;
+    border-left-color: #f0b90b;
+}
+
+/* 设置卡片 */
+body.dark .settings-section .ant-card {
+    background-color: #2d3748;
+    border-color: #4a5568;
+}
+
+body.dark .settings-section .ant-card .ant-card-head,
+body.dark .settings-section .ant-card .ant-card-body {
+     color: #e0e0e0; /* 卡片内文字 */
+}
+
+body.dark .settings-section .ant-typography {
+    color: #e0e0e0; /* 确保 Typography 组件文字颜色正确 */
+}
+
+/* 其他可能需要调整的元素 */
+body.dark .profile-details, body.dark .security-section {
+    background-color: #333;
+    border-bottom-color: #555;
+}
+
+body.dark .profile-details h3, body.dark .security-section h3 {
+    color: #e0e0e0;
+    border-bottom-color: #555;
+}
+
+body.dark .form-group label {
+    color: #aaa;
+}
+
+body.dark .form-group input {
+    background-color: #2a2a2a;
+    border-color: #555;
+    color: #e0e0e0;
+}
+
+body.dark .form-group input:disabled {
+    background-color: #444;
+    color: #888;
+}
+
+/* 订单卡片等 */
+body.dark .order-card {
+    background-color: #333;
+    border-color: #555;
+}
+
+body.dark .order-title, body.dark .order-info span {
+     color: #ccc;
+}
+
+body.dark .order-price {
+    color: #66bfff; /* 价格高亮 */
+}
+
+/* 收藏卡片 */
+body.dark .favorite-card {
+    background-color: #333;
+    border-color: #555;
+}
+
+body.dark .favorite-title {
+    color: #e0e0e0;
+}
+
+body.dark .favorite-description {
+    color: #aaa;
+}
+
+/* 可能需要调整 Ant Design 的 Select, Switch 等 */
+body.dark .ant-select-selector {
+    background-color: #2a2a2a !important;
+    border-color: #555 !important;
+    color: #e0e0e0 !important;
+}
+body.dark .ant-select-arrow {
+    color: #aaa !important;
+}
+
+body.dark .ant-select-dropdown {
+    background-color: #333;
+}
+body.dark .ant-select-item {
+    color: #e0e0e0;
+}
+body.dark .ant-select-item-option-active {
+    background-color: #444;
+}
+body.dark .ant-select-item-option-selected {
+    background-color: #555;
+    color: #fff;
+}
+
+body.dark .ant-switch {
+    background-color: #555; 
+}
+body.dark .ant-switch-checked {
+    background-color: #66bfff;
+} 

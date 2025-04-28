@@ -1,0 +1,68 @@
+.price-report-container {
+  padding: 24px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.report-intro {
+  margin-bottom: 24px;
+  font-size: 16px;
+  color: #666;
+}
+
+.loading-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 400px;
+}
+
+.stats-row {
+  margin-bottom: 24px;
+}
+
+.stats-row .ant-card {
+  height: 120px;
+  transition: all 0.3s;
+}
+
+.stats-row .ant-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-3px);
+}
+
+.chart-row {
+  margin-bottom: 24px;
+}
+
+.chart-row .ant-card {
+  margin-bottom: 24px;
+  transition: all 0.3s;
+}
+
+.chart-row .ant-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.filter-container {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: #f9f9f9;
+  border-radius: 4px;
+}
+
+.data-table {
+  margin-top: 24px;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+  .stats-row .ant-col {
+    margin-bottom: 16px;
+  }
+  
+  .chart-row .ant-col {
+    width: 100%;
+  }
+} 

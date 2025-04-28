@@ -1,0 +1,139 @@
+/* 城市卡片样式 */
+.city-card-container {
+    position: relative;
+    height: 220px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.city-card-container:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.city-card-background-wrapper {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.city-card-background {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+}
+
+.city-card-container:hover .city-card-background {
+    transform: scale(1.1);
+}
+
+.city-card-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.7) 100%);
+}
+
+.city-card-content {
+    position: relative;
+    height: 100%;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    z-index: 2;
+}
+
+.city-card-header {
+    display: flex;
+    flex-direction: column;
+}
+
+.city-card-header h3 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: 600;
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.city-card-province {
+    font-size: 14px;
+    opacity: 0.8;
+    margin-top: 2px;
+}
+
+.city-card-description {
+    margin: 8px 0 15px;
+    font-size: 14px;
+    opacity: 0.9;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.city-card-footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.city-card-scenic-count {
+    font-size: 13px;
+    opacity: 0.9;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.city-card-explore-btn {
+    background-color: rgba(24, 144, 255, 0.9);
+    color: white;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.3s;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.city-card-explore-btn:hover {
+    background-color: rgba(24, 144, 255, 1);
+    transform: translateX(2px);
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .city-card-container {
+        height: 200px;
+    }
+    
+    .city-card-header h3 {
+        font-size: 20px;
+    }
+    
+    .city-card-description {
+        margin: 5px 0 10px;
+        -webkit-line-clamp: 1;
+    }
+}
+
+@media (max-width: 480px) {
+    .city-card-container {
+        height: 180px;
+    }
+} 

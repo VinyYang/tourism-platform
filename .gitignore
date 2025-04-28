@@ -1,0 +1,64 @@
+# Node
+node_modules/
+
+# Build
+build/
+dist/
+
+# Env
+.env
+.env.*
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# VSCode
+.vscode/
+
+# Mac
+.DS_Store
+
+# Windows
+Thumbs.db
+
+# Others
+*.local
+*.log
+
+# Frontend
+frontend/node_modules/
+frontend/build/
+frontend/dist/
+frontend/.env
+frontend/.env.*
+
+# Backend
+backend/node_modules/
+backend/build/
+backend/dist/
+backend/.env
+backend/.env.*
+
+# Python
+__pycache__/
+*.pyc
+
+# Database
+*.sqlite
+*.db
+*.sql
+*.sql.bak
+
+# 忽略文档、历史、AI、mock、测试等非核心目录
+doc/
+server/
+test/
+mock/
+.cursor/
+
+# 忽略所有md文件，除了README.md
+*.md
+!README.md 
+*.mdc

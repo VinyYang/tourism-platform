@@ -1,0 +1,29 @@
+{
+  "name": "db",
+  "version": "1.0.0",
+  "description": "## 项目概述",
+  "main": "index.js",
+  "directories": {
+    "doc": "doc"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start-frontend": "npm start --prefix frontend",
+    "start-backend": "cd backend && npm run dev",
+    "dev": "concurrently --kill-others \"npm run start-frontend\" \"npm run start-backend\"",
+    "start": "npm run dev"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/amap-js-api": "^1.4.6",
+    "@types/lodash": "^4.17.16",
+    "concurrently": "^8.2.2",
+    "cross-env": "^7.0.3"
+  },
+  "dependencies": {
+    "@ant-design/compatible": "^5.1.4",
+    "jwt-decode": "^4.0.0"
+  }
+}

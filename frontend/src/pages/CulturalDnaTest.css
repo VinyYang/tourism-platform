@@ -1,0 +1,35 @@
+/* CulturalDnaTest.css - 添加样式来美化问答页面 */
+
+.cultural-dna-test-container {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.cultural-dna-test-container .ant-card {
+    border: none;
+    box-shadow: none;
+}
+
+.cultural-dna-test-container .ant-card-head {
+    font-size: 1.1em;
+    font-weight: 500;
+}
+
+.cultural-dna-test-container .ant-radio-wrapper {
+    font-size: 1em;
+    line-height: 1.6;
+}
+
+.cultural-dna-test-container .ant-progress-text {
+    font-size: 0.9em;
+}
+
+/* 新增：覆盖继承的 0px 字体大小，确保选项文本可见 */
+.cultural-dna-test-container .ant-radio-label {
+  /* font-size: 1em; */ /* 修改为绝对单位并提高优先级 */
+  font-size: 14px !important;
+} 

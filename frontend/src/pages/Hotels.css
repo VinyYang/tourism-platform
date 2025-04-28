@@ -1,0 +1,195 @@
+/* 酒店页面容器 */
+.hotels-container {
+    min-height: 100vh;
+    background-color: #f5f7fa;
+    padding-bottom: 40px;
+}
+
+/* 页面头部样式 */
+.hotels-header {
+    background: linear-gradient(135deg, #1a365d 0%, #2a4365 100%);
+    color: white;
+    padding: 60px 40px;
+    text-align: center;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.hotels-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.hotels-header p {
+    font-size: 1.2rem;
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.9;
+}
+
+/* 主体内容区域 */
+.hotels-content {
+    display: flex;
+    gap: 30px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 侧边栏样式 */
+.hotels-sidebar {
+    width: 280px;
+    flex-shrink: 0;
+    background: white;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    align-self: flex-start;
+    position: sticky;
+    top: 20px;
+}
+
+.hotels-sidebar h3 {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    color: #333;
+    font-weight: 600;
+}
+
+.filter-section {
+    margin-bottom: 20px;
+}
+
+.filter-section h4 {
+    margin-bottom: 12px;
+    font-size: 0.95rem;
+    color: #555;
+    font-weight: 500;
+}
+
+/* 酒店列表区域 */
+.hotels-list-area {
+    flex: 1;
+}
+
+.hotels-toolbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    padding: 15px 20px;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+/* 酒店卡片样式 */
+.hotel-card {
+    height: 100%;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    margin-bottom: 10px;
+}
+
+.hotel-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.hotel-card-image {
+    object-fit: cover;
+    object-position: center;
+    height: 200px;
+    width: 100%;
+}
+
+.hotel-card-placeholder {
+    background-color: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    color: #999;
+}
+
+.hotel-card .ant-card-meta-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: #333;
+    white-space: normal;
+    line-height: 1.4;
+}
+
+.hotel-card-location {
+    font-size: 0.85rem;
+    margin-bottom: 10px;
+    color: #666;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.hotel-card-rating {
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.hotel-card-price {
+    margin-bottom: 8px;
+}
+
+.hotel-card-facilities {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+}
+
+.hotel-card-facilities .ant-tag {
+    border-radius: 4px;
+    font-size: 0.75rem;
+    padding: 0 6px;
+    margin-right: 0;
+}
+
+/* 响应式布局 */
+@media (max-width: 992px) {
+    .hotels-content {
+        flex-direction: column;
+    }
+    
+    .hotels-sidebar {
+        width: 100%;
+        position: static;
+        margin-bottom: 20px;
+    }
+
+    .hotels-header {
+        padding: 40px 20px;
+    }
+    
+    .hotels-header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .hotels-toolbar {
+        flex-direction: column;
+        gap: 15px;
+        align-items: flex-start;
+    }
+    
+    .hotels-header h1 {
+        font-size: 1.7rem;
+    }
+    
+    .hotels-header p {
+        font-size: 1rem;
+    }
+} 

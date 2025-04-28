@@ -1,0 +1,234 @@
+.itinerary-day {
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.itinerary-day-drop-target {
+    box-shadow: 0 0 10px rgba(24, 144, 255, 0.5);
+}
+
+.itinerary-day-card {
+    margin-bottom: 24px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.itinerary-day-card .ant-card-head {
+    background-color: #f5f5f5;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    padding: 0 16px;
+}
+
+.day-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.day-title {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.drag-handle {
+    cursor: move;
+    color: #999;
+    font-size: 14px;
+    padding: 8px 0;
+}
+
+.day-actions {
+    display: flex;
+    gap: 4px;
+}
+
+.day-content {
+    padding: 8px 0;
+}
+
+.day-items-list {
+    margin-bottom: 16px;
+}
+
+.itinerary-item {
+    padding: 12px;
+    margin-bottom: 8px;
+    border-radius: 4px;
+    border-left: 4px solid #d9d9d9;
+    background-color: #fafafa;
+    transition: all 0.3s;
+}
+
+.itinerary-item:hover {
+    background-color: #f0f0f0;
+}
+
+/* 不同类型项目的边框颜色 */
+.itinerary-item.attraction {
+    border-left-color: #1890ff;
+}
+
+.itinerary-item.custom {
+    border-left-color: #722ed1;
+}
+
+.itinerary-item.transport {
+    border-left-color: #fa8c16;
+}
+
+.itinerary-item.meal {
+    border-left-color: #eb2f96;
+}
+
+.itinerary-item.accommodation {
+    border-left-color: #52c41a;
+}
+
+.itinerary-item-content {
+    display: flex;
+    gap: 16px;
+    width: 100%;
+}
+
+.item-image-container {
+    width: 80px;
+    height: 80px;
+    flex-shrink: 0;
+    overflow: hidden;
+    border-radius: 4px;
+}
+
+.item-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.item-details {
+    flex: 1;
+    min-width: 0;
+}
+
+.item-time-title {
+    display: flex;
+    align-items: baseline;
+    gap: 8px;
+    margin-bottom: 4px;
+}
+
+.item-time {
+    font-size: 12px;
+    white-space: nowrap;
+}
+
+.item-title {
+    font-size: 16px;
+    margin-right: auto;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.item-location {
+    margin-bottom: 4px;
+    font-size: 13px;
+}
+
+.item-description {
+    margin-bottom: 8px;
+    font-size: 14px;
+    color: #666;
+}
+
+.item-cost {
+    font-size: 13px;
+}
+
+.item-notes {
+    margin-top: 8px;
+    font-size: 13px;
+    color: #888;
+}
+
+.item-edit-form,
+.custom-item-form {
+    padding: 8px 0;
+}
+
+.edit-actions,
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-top: 16px;
+}
+
+.add-custom-form-container {
+    margin: 16px 0;
+    padding: 16px;
+    border: 1px dashed #d9d9d9;
+    border-radius: 8px;
+    background-color: #fafafa;
+}
+
+.empty-day-message {
+    padding: 24px;
+    text-align: center;
+    background-color: #fafafa;
+    border-radius: 4px;
+    color: #999;
+}
+
+.day-footer {
+    margin-top: 16px;
+}
+
+.day-notes {
+    margin-top: 16px;
+}
+
+.day-notes-input {
+    background-color: #f9f9f9;
+    border-color: #e8e8e8;
+}
+
+.day-notes-input:hover,
+.day-notes-input:focus {
+    border-color: #40a9ff;
+    background-color: #fff;
+}
+
+/* 响应式调整 */
+@media (max-width: 576px) {
+    .itinerary-item-content {
+        flex-direction: column;
+        gap: 8px;
+    }
+    
+    .item-image-container {
+        width: 100%;
+        height: 160px;
+    }
+    
+    .day-title {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 4px;
+    }
+}
+
+/* 拖动时的样式 */
+.itinerary-item.dragging {
+    opacity: 0.6;
+    border: 2px dashed #1890ff;
+}
+
+.drop-indicator {
+    height: 2px;
+    background-color: #1890ff;
+    margin: 8px 0;
+} 

@@ -1,0 +1,143 @@
+.admin-dashboard {
+    padding-bottom: 20px;
+}
+
+.dashboard-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.loading-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 400px;
+}
+
+/* 统计卡片样式 */
+.stat-cards {
+    margin-bottom: 24px;
+}
+
+.stat-cards .ant-card {
+    height: 100%;
+    transition: all 0.3s;
+}
+
+.stat-cards .ant-card:hover {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.stat-trend {
+    display: inline-flex;
+    align-items: center;
+    margin-left: 8px;
+    font-size: 14px;
+}
+
+.stat-trend span {
+    margin-left: 4px;
+}
+
+/* 数据卡片样式 */
+.data-content {
+    margin-bottom: 24px;
+}
+
+.data-card {
+    height: 100%;
+}
+
+.order-amount {
+    font-size: 16px;
+    font-weight: bold;
+    margin-bottom: 4px;
+}
+
+/* 图表样式 */
+.chart-card {
+    margin-bottom: 24px;
+}
+
+.chart-placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    text-align: center;
+    background-color: #f9f9f9;
+    border-radius: 4px;
+}
+
+.chart-data {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 20px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 4px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+    overflow-x: auto;
+}
+
+.chart-data-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+    min-width: 100px;
+    border-right: 1px dashed #eee;
+}
+
+.chart-data-item:last-child {
+    border-right: none;
+}
+
+.chart-data-item .date {
+    font-weight: bold;
+    margin-bottom: 8px;
+}
+
+.chart-data-item .visitors,
+.chart-data-item .pageviews {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+}
+
+.chart-data-item .label {
+    font-size: 12px;
+    color: #999;
+    margin-bottom: 4px;
+}
+
+.chart-data-item .value {
+    font-size: 16px;
+    font-weight: 500;
+}
+
+/* 响应式调整 */
+@media (max-width: 768px) {
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .dashboard-header .ant-picker {
+        margin-top: 12px;
+    }
+    
+    .chart-data {
+        padding: 12px;
+    }
+    
+    .chart-data-item {
+        padding: 0 8px;
+        min-width: 80px;
+    }
+} 

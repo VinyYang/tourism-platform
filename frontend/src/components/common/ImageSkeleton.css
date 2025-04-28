@@ -1,0 +1,86 @@
+/* 
+ * 图片骨架屏组件样式
+ */
+
+.image-skeleton {
+  background: #f0f2f5;
+  position: relative;
+  overflow: hidden;
+  display: block;
+}
+
+/* 形状样式 */
+.image-skeleton-rounded {
+  border-radius: 8px;
+}
+
+.image-skeleton-circle {
+  border-radius: 50%;
+}
+
+.image-skeleton-square {
+  border-radius: 0;
+}
+
+/* 类型特定样式 */
+.image-skeleton-avatar {
+  border-radius: 50%;
+}
+
+.image-skeleton-cover {
+  border-radius: 4px;
+}
+
+.image-skeleton-strategyCover {
+  border-radius: 4px 4px 0 0;
+}
+
+/* 动画效果 */
+.image-skeleton-animate::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0) 0,
+    rgba(255, 255, 255, 0.2) 20%,
+    rgba(255, 255, 255, 0.5) 60%,
+    rgba(255, 255, 255, 0)
+  );
+  animation: shimmer 2s infinite;
+  transform: translateX(-100%);
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* 特定类型尺寸 */
+.image-skeleton-scenic {
+  aspect-ratio: 3/2;
+}
+
+.image-skeleton-hotel {
+  aspect-ratio: 4/3;
+}
+
+.image-skeleton-strategy {
+  aspect-ratio: 2/1;
+}
+
+.image-skeleton-payment {
+  aspect-ratio: 4/3;
+  max-width: 80px;
+  max-height: 60px;
+}
+
+.image-skeleton-logo {
+  aspect-ratio: 2/1;
+  max-width: 80px;
+  max-height: 40px;
+} 

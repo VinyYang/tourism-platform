@@ -1,0 +1,51 @@
+.review-modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.review-order-title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #eee;
+}
+
+.review-rating-container,
+.review-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.review-label {
+    font-size: 0.95rem;
+    color: #666;
+}
+
+.rating-text {
+    font-size: 0.9rem;
+    color: #f39c12;
+    margin-top: 5px;
+}
+
+.review-tips {
+    font-size: 0.85rem;
+    color: #888;
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 4px;
+    margin-top: 10px;
+}
+
+/* 响应式调整 */
+@media (max-width: 480px) {
+    .review-modal-content {
+        gap: 15px;
+    }
+    
+    .review-order-title {
+        font-size: 1rem;
+    }
+} 

@@ -1,0 +1,77 @@
+.chinaMap {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7);
+  z-index: 1000;
+}
+
+.customMarker {
+  position: relative;
+}
+
+.markerIcon {
+  width: 30px;
+  height: 30px;
+  background-color: #1890ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: bold;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.3);
+  cursor: pointer;
+  transition: all 0.3s ease;
+
+  &:hover {
+    transform: scale(1.1);
+    background-color: #40a9ff;
+  }
+}
+
+.markerLabel {
+  font-size: 14px;
+  line-height: 1;
+}
+
+.infoWindow {
+  padding: 12px;
+  max-width: 300px;
+
+  h4 {
+    margin: 0 0 8px;
+    color: #1890ff;
+    font-size: 16px;
+  }
+
+  p {
+    margin: 4px 0;
+    color: #666;
+  }
+
+  .description {
+    margin-top: 8px;
+    font-size: 14px;
+    color: #333;
+    line-height: 1.5;
+  }
+
+  .spotImage {
+    margin-top: 8px;
+    max-width: 100%;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+} 

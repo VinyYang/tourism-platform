@@ -6,6 +6,59 @@
 
 ## 页面效果展示
 
+### 首页
+![Image](https://github.com/user-attachments/assets/48c6c046-af76-4252-bc8a-f6784dd05354)
+
+![Image](https://github.com/user-attachments/assets/73778388-47ea-4f95-9bb3-019eaf014a6a)
+
+![Image](https://github.com/user-attachments/assets/277cbf8d-ad36-4483-94ba-41a9d174e8aa)
+
+![Image](https://github.com/user-attachments/assets/0b067bd5-61dd-4dfd-ab77-8e0eb1b9b0a7)
+
+### 文旅景点
+
+![Image](https://github.com/user-attachments/assets/9460651e-36c5-422d-a53f-c332105963c9)
+
+### 文旅攻略
+
+![Image](https://github.com/user-attachments/assets/6956deaf-0aed-4256-adf3-fe5e021d1c3f)
+
+### 酒店
+
+![Image](https://github.com/user-attachments/assets/f7083e65-1870-4f66-aa33-0d908a538019)
+
+### 文旅路线
+
+![Image](https://github.com/user-attachments/assets/b68a8c06-7433-4f8e-b537-7409b9f02192)
+
+
+![Image](https://github.com/user-attachments/assets/27ae109a-2837-4384-8f3f-df739619e075)
+
+### 文旅价格
+
+![Image](https://github.com/user-attachments/assets/b73e26e4-127a-48ac-9c01-e308ba27f053)
+
+### 文旅定制
+
+![Image](https://github.com/user-attachments/assets/481fcead-ba2d-4721-9443-8601999efb22)
+
+### 攻略写作
+
+![Image](https://github.com/user-attachments/assets/c9c280da-59eb-4d32-a5f3-e6e1457c8877)
+
+### 个人中心
+
+![Image](https://github.com/user-attachments/assets/df1895fe-ce0d-4d25-ad4f-664f6502dc67)
+
+![Image](https://github.com/user-attachments/assets/837caeef-ebdb-4897-ad18-2af5962d5065)
+
+![Image](https://github.com/user-attachments/assets/81483a27-7bc5-4f7d-af56-ef924ab27f7c)
+
+### 后台管理
+
+![Image](https://github.com/user-attachments/assets/35c9f65b-73c0-4c00-8d91-a4b21644e908)
+
+![Image](https://github.com/user-attachments/assets/a5991a2b-6432-4494-97ed-a0bff5a5f515)
 
 
 ## 主要特性
